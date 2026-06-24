@@ -25,6 +25,7 @@ dist/
 *.txt
 *.pdf
 *.csv
+!webbench_challenge.csv
 *.json
 *.jsonl
 *.log
