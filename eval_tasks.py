@@ -1079,19 +1079,19 @@ def _parse_args() -> argparse.Namespace:
         epilog="""
 Examples:
   # Use Gemini (needs GOOGLE_API_KEY in .env):
-  python eval_tasks_fixed.py --llm-provider gemini --csv sample_data.csv
+  python eval_tasks_fixed.py --llm-provider gemini --csv webbench_challenge.csv
 
   # Use Gemini with a specific model:
-  python eval_tasks_fixed.py --llm-provider gemini --llm-model gemini-2.0-flash-exp --csv sample_data.csv
+  python eval_tasks_fixed.py --llm-provider gemini --llm-model gemini-2.0-flash-exp --csv webbench_challenge.csv
 
   # Use local DeepSeek (original behaviour):
   python eval_tasks_fixed.py --llm-provider local \\
       --llm-base-url http://103.108.136.157:8000/v1 \\
       --llm-model ./models/DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf \\
-      --step-timeout 1200 --max-steps 5 --csv sample_data.csv
+      --step-timeout 1200 --max-steps 5 --csv webbench_challenge.csv
         """,
     )
-    p.add_argument("--csv", default="sample_data.csv")
+    p.add_argument("--csv", default="webbench_challenge.csv")
     p.add_argument("--records-per-category", type=int, default=5,    # Changed to 5
                    help="Tasks per category (default: 5)")
     p.add_argument(
