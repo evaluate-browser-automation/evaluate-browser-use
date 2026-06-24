@@ -1,0 +1,51 @@
+ID,website,Category,instruction
+81,https://www.amazon.com,READ,"Find the product page for ""Amazon Basics AA Batteries"" and record the pack size and pricing information.
+Only use http://amazon.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+577,https://www.foxnews.com,READ,"Use the website’s search function to find an article related to the ""US Economy"" and extract the main points from the introduction.
+Only use http://foxnews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+756,https://www.healthline.com,READ,"Use the search tool to look for “diabetes management” and output the titles of the first five articles displayed.
+Only use http://healthline.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1120,https://www.medicinenet.com,READ,"Search the MedicineNet website for articles on “Type 2 Diabetes” and list the titles of the first five results.
+Only use http://medicinenet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1130,https://www.menshealth.com,READ,"Browse the homepage and list the titles of the first three articles in the Fitness section.
+Only use http://menshealth.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2100,https://www.wikihow.com/Main-Page,CREATE,"Login, Goto My Profile > My Drafts, Compose a new article on wikiHow titled “How to Budget Your Monthly Expenses” with step-by-step instructions and practical saving tips.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1401,https://www.radiotimes.com,CREATE,"Save your favorite TV schedule listing for tonight by creating a bookmark on Radiotimes and adding a brief note on why you plan to watch that show.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+88,https://www.apa.org,CREATE,"Subscribe to the APA weekly newsletter by entering your email address on the subscription form available on the homepage.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2365,https://www.bbcgoodfood.com,CREATE,"Write and submit a comment on the ""Avocado Toast"" recipe that includes a 4-star rating and a brief review of your experience.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2099,https://www.wikihow.com/Main-Page,CREATE,"Login, Goto My Profile > My Drafts, Write a new how-to guide on wikiHow called “How to Practice Mindfulness in Daily Life,” ensuring you include a dedicated tip for breathing exercises.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1403,https://www.radiotimes.com,DELETE,"Navigate to your newsletter subscription settings on Radiotimes and unsubscribe from the weekly news digest, confirming successful removal via the displayed message.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2367,https://www.bbcgoodfood.com,DELETE,"Log in, create a “Quick Pasta” recipe collection and add 3 pasta recipes, then delete the recipe collection and confirm it is gone
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2368,https://www.bbcgoodfood.com,DELETE,"Log in, post a comment under a grilled chicken recipe, then delete that comment. 
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1178,https://www.nasdaq.com,DELETE,"Log in, add Apple Inc. to your watchlist, then remove it from your personalized watchlist and verify that it no longer appears in your list.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2101,https://www.wikihow.com/Main-Page,DELETE,"Log in to your wikiHow account, create a test draft titled “Temporary Guide for Testing,” then delete the draft and confirm its removal from your drafts list.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2108,https://www.wikihow.com/Main-Page,UPDATE,"Log in to your wikiHow account and update your profile by adding a new biography that highlights your recent how-to contributions.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1409,https://www.radiotimes.com,UPDATE,"Log in to your Radiotimes newsletter subscription portal and update your email preferences to receive only UK entertainment news, then verify the confirmation message.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+96,https://www.apa.org,UPDATE,"Modify your APA account’s newsletter preferences to switch from bi-weekly updates to monthly summaries.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1184,https://www.nasdaq.com,UPDATE,"Log in, create a personalized watchlist, then access your personalized watchlist and update it by adding ""Tesla"" and ""Alphabet Inc."" to reflect your current interests.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2110,https://www.wikihow.com/Main-Page,UPDATE,"Create a draft for “How to Develop a Morning Routine” on wikiHow, and update the draft with an additional final step.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2369,https://www.bbcgoodfood.com,FILE_MANIPULATION,"From the ""Classic Beef Stew"" recipe page, print the recipe to a PDF file and extract a textual list of the ingredients included.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2171,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Search for a research paper on ""Climate Change Adaptation"" published on the site and download the corresponding PDF file.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2169,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Search for and download a policy document available in PDF format that focuses on environmental policies.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2168,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Find and download a PDF report from the ""Research"" section that discusses global economic trends, confirming that the file name includes ""Economic.""
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2166,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Download the latest annual World Bank report available in PDF format from the ""Publications"" or ""Reports"" section.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
