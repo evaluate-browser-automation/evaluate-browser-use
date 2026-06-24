@@ -40,11 +40,11 @@ from dotenv import load_dotenv
 
 # ── Import guard ───────────────────────────────────────────────────────────────
 try:
-    from browser_use import Agent, Browser
-    from browser_use.llm import ChatOpenAI
+    from browser_use import Agent, Browser, ChatGoogle
+    from langchain_openai import ChatOpenAI
 except ImportError as e:
     print(f"\n[ERROR] Cannot import browser_use: {e}")
-    print("  Fix: pip install browser-use  or  pip install -e path/to/browser-use\n")
+    print("  Fix: uv pip install browser-use langchain-openai langchain-google-genai\n")
     raise SystemExit(1)
 
 load_dotenv()
@@ -83,12 +83,58 @@ _GEMINI_OPENAI_BASE = "https://generativelanguage.googleapis.com/v1beta/openai/"
 
 # Map friendly short names to full Gemini model IDs on the OpenAI-compat endpoint
 _GEMINI_MODEL_ALIASES: dict[str, str] = {
-    "gemini-2.5-flash":        "gemini-2.5-flash-preview-05-20",
+    "gemini-2.5-flash":        "gemini-2.5-flash",
     "gemini-2.0-flash":        "gemini-2.0-flash",
     "gemini-2.0-flash-exp":    "gemini-2.0-flash-exp",
     "gemini-1.5-pro":          "gemini-1.5-pro",
     "gemini-1.5-flash":        "gemini-1.5-flash",
 }
+
+# ── Free-tier Rate Limiter ─────────────────────────────────────────────────────
+import collections
+import random
+
+class RateLimiter:
+    """
+    Sliding-window rate limiter.
+    Tracks timestamps of the last N requests and blocks until it is safe
+    to make the next one — keeping calls under `max_rpm` per 60-second window.
+    Also performs exponential back-off with jitter on 429/503 responses.
+    """
+    def __init__(self, max_rpm: int = 10):
+        self.max_rpm   = max_rpm
+        self.window_s  = 60.0
+        self._times: collections.deque = collections.deque()
+
+    async def acquire(self) -> None:
+        """Block until a request slot is available inside the window."""
+        while True:
+            now = time.monotonic()
+            # drop timestamps older than the window
+            while self._times and now - self._times[0] >= self.window_s:
+                self._times.popleft()
+
+            if len(self._times) < self.max_rpm:
+                self._times.append(now)
+                return
+
+            # wait until the oldest slot falls out of the window
+            wait = self.window_s - (now - self._times[0]) + 0.1
+            logger.debug(f"[RateLimiter] RPM cap reached — waiting {wait:.1f}s")
+            await asyncio.sleep(wait)
+
+    async def backoff_on_error(self, error_str: str, attempt: int) -> bool:
+        """
+        If the error looks like a rate-limit or overload response (429/503),
+        sleep with exponential back-off + jitter and return True.
+        Otherwise return False.
+        """
+        if "429" in error_str or "503" in error_str or "RESOURCE_EXHAUSTED" in error_str or "UNAVAILABLE" in error_str:
+            delay = min(60.0, (2 ** attempt) + random.uniform(0, 2))
+            logger.warning(f"[RateLimiter] Rate-limit / overload detected — backing off {delay:.1f}s (attempt {attempt})")
+            await asyncio.sleep(delay)
+            return True
+        return False
 
 
 def build_llm(args: argparse.Namespace) -> Any:
@@ -118,37 +164,32 @@ def build_llm(args: argparse.Namespace) -> Any:
         raw_model = (
             args.llm_model
             if args.llm_model != _LOCAL_MODEL_DEFAULT
-            else "gemini-2.5-flash-preview-05-20"
+            else "gemini-2.5-flash"
         )
         model_name = _GEMINI_MODEL_ALIASES.get(raw_model, raw_model)
 
-        logger.info(f"  LLM Provider : Gemini via OpenAI-compat endpoint  (model={model_name})")
-        logger.info(f"  Endpoint     : {_GEMINI_OPENAI_BASE}")
+        logger.info(f"  LLM Provider : Native Gemini via ChatGoogle (model={model_name})")
 
-        # ChatOpenAI pointed at Google's OpenAI-compat base — browser-use handles
-        # this path natively; tool-call JSON is identical to OpenAI format.
-        llm = ChatOpenAI(
-            base_url=_GEMINI_OPENAI_BASE,
-            api_key=api_key,
-            model=model_name,
-            temperature=args.llm_temperature,
-            #max_tokens=4096,
-        )
-        return llm
+        # Official Browser-Use ChatGoogle for Gemini
+        llm = ChatGoogle(model=model_name, temperature=args.llm_temperature)
+        return llm, model_name, f"gemini-api/{model_name}"
 
     elif provider == "local":
         # ── Local vLLM / llama.cpp (OpenAI-compat) ────────────────────────────
-        logger.info(f"  LLM Provider : Local OpenAI-compat  (url={args.llm_base_url}  model={args.llm_model})")
+        model_name = args.llm_model
+        logger.info(f"  LLM Provider : Local OpenAI-compat  (url={args.llm_base_url}  model={model_name})")
         llm = ChatOpenAI(
             base_url=args.llm_base_url,
             api_key=args.llm_api_key,
-            model=args.llm_model,
+            model=model_name,
             temperature=args.llm_temperature,
         )
         llm.max_tokens = 1500
         if hasattr(llm, "model_kwargs"):
             llm.model_kwargs = {"max_tokens": 1500}
-        return llm
+        # Short label: just the filename without the full path
+        short_name = model_name.split("/")[-1].replace(".gguf", "")
+        return llm, model_name, f"local/{short_name}"
 
     else:
         raise ValueError(f"Unknown --llm-provider '{provider}'. Choose: gemini | local")
@@ -446,7 +487,10 @@ class WebBenchEvaluator:
         max_steps: int = 5,
         headless: bool = False,
         disable_security: bool = True,
+        chrome_profile_dir: str | None = None,
         max_retries: int = 2,
+        rpm_limit: int = 5,
+        task_delay: float = 15.0,
         output_dir: str = "./results",
         run_label: str = "",
         validity_classifier_api_key: str = "",
@@ -466,7 +510,10 @@ class WebBenchEvaluator:
         self.max_steps = max_steps
         self.headless = headless
         self.disable_security = disable_security
+        self.chrome_profile_dir = chrome_profile_dir
         self.max_retries = max_retries
+        self.task_delay = task_delay
+        self._rate_limiter = RateLimiter(max_rpm=rpm_limit)
         self.output_dir = Path(output_dir)
         self.run_label = run_label or datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
         self.validity_classifier_api_key = validity_classifier_api_key
@@ -579,7 +626,11 @@ class WebBenchEvaluator:
             llm_model=self.llm_model,
             llm_temperature=self.llm_temperature,
         )
-        llm = build_llm(_fake_args)
+        llm, resolved_model, provider_label = build_llm(_fake_args)
+        # Update evaluator metadata so every TaskResult records the actual model name
+        self.llm_model    = resolved_model
+        self.llm_provider = provider_label
+        logger.info(f"  Resolved model : {resolved_model}  |  provider label : {provider_label}")
 
         logger.info("\nRunning LLM health check...")
         if not self._health_check_llm():
@@ -601,6 +652,9 @@ class WebBenchEvaluator:
         logger.info(f"{'='*70}\n")
 
         for idx, (_, row) in enumerate(sample.iterrows(), 1):
+            if idx > 1 and self.task_delay > 0:
+                logger.info(f"  [RateLimit] Cooling down {self.task_delay:.0f}s before next task...")
+                await asyncio.sleep(self.task_delay)
             result = await self._run_with_retry(idx, total, row, llm)
             self.results.append(result)
 
@@ -649,10 +703,15 @@ class WebBenchEvaluator:
     ) -> TaskResult:
         result = TaskResult()
         for attempt in range(1, self.max_retries + 2):
+            # Acquire a rate-limit slot before each attempt
+            await self._rate_limiter.acquire()
             result = await self._run_single(idx, total, row, llm)
             result.retry_count = attempt - 1
             if result.status == "SUCCESS":
                 break
+            # Back off on rate-limit / server overload errors
+            if result.error_message and await self._rate_limiter.backoff_on_error(result.error_message, attempt):
+                continue
             if result.error_code in ("BrowserInitFailed", "System_SilentCrash") and attempt <= self.max_retries:
                 wait = 2 ** attempt
                 logger.info(f"    Retry {attempt}/{self.max_retries} in {wait}s...")
@@ -728,7 +787,11 @@ class WebBenchEvaluator:
         browser: Browser | None = None
 
         try:
-            browser = Browser(headless=self.headless, disable_security=self.disable_security)
+            browser = Browser(
+                headless=self.headless, 
+                disable_security=self.disable_security,
+                user_data_dir=self.chrome_profile_dir
+            )
         except Exception as e:
             result.latency_seconds = round(time.time() - start, 2)
             result.status = "FAILED"
@@ -1016,19 +1079,19 @@ def _parse_args() -> argparse.Namespace:
         epilog="""
 Examples:
   # Use Gemini (needs GOOGLE_API_KEY in .env):
-  python eval_tasks_fixed.py --llm-provider gemini --csv webbench_ready.csv
+  python eval_tasks_fixed.py --llm-provider gemini --csv sample_data.csv
 
   # Use Gemini with a specific model:
-  python eval_tasks_fixed.py --llm-provider gemini --llm-model gemini-2.0-flash-exp --csv webbench_ready.csv
+  python eval_tasks_fixed.py --llm-provider gemini --llm-model gemini-2.0-flash-exp --csv sample_data.csv
 
   # Use local DeepSeek (original behaviour):
   python eval_tasks_fixed.py --llm-provider local \\
       --llm-base-url http://103.108.136.157:8000/v1 \\
       --llm-model ./models/DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf \\
-      --step-timeout 1200 --max-steps 5 --csv webbench_ready.csv
+      --step-timeout 1200 --max-steps 5 --csv sample_data.csv
         """,
     )
-    p.add_argument("--csv", default="webbench_ready.csv")
+    p.add_argument("--csv", default="sample_data.csv")
     p.add_argument("--records-per-category", type=int, default=5,    # Changed to 5
                    help="Tasks per category (default: 5)")
     p.add_argument(
@@ -1069,7 +1132,12 @@ Examples:
     p.add_argument("--max-dom-chars", type=int, default=MAX_DOM_CHARS)
     p.add_argument("--headless", action="store_true", default=False)
     p.add_argument("--no-disable-security", dest="disable_security", action="store_false", default=True)
+    p.add_argument("--chrome-profile-dir", default=None, help="Path to your local Chrome profile (e.g., /Users/yourname/Library/Application Support/Google/Chrome)")
     p.add_argument("--max-retries", type=int, default=2)
+    p.add_argument("--rpm-limit", type=int, default=5,
+                   help="Max LLM requests per minute (gemini-2.5-flash free tier = 5 RPM)")
+    p.add_argument("--task-delay", type=float, default=15.0,
+                   help="Seconds to wait between tasks to stay under RPM cap (default: 15s)")
     p.add_argument("--output-dir", default="./results")
     p.add_argument("--run-label", default="")
     p.add_argument("--validity-classifier-api-key", default="")
@@ -1093,7 +1161,10 @@ async def main() -> None:
         max_steps=args.max_steps,
         headless=args.headless,
         disable_security=args.disable_security,
+        chrome_profile_dir=args.chrome_profile_dir,
         max_retries=args.max_retries,
+        rpm_limit=args.rpm_limit,
+        task_delay=args.task_delay,
         output_dir=args.output_dir,
         run_label=args.run_label,
         validity_classifier_api_key=args.validity_classifier_api_key,
