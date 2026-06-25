@@ -203,6 +203,10 @@ ERROR_TAXONOMY: dict[str, dict[str, str]] = {
         "label": "WAF / IP Block",
         "hint": "Add stealth plugin + residential proxy rotation",
     },
+    "Security_FirewallBlocked": {
+        "label": "Corporate Firewall / Proxy Block",
+        "hint": "Run outside corporate VPN or configure local certs",
+    },
     "Security_CaptchaFailed": {
         "label": "CAPTCHA wall",
         "hint": "Integrate 2captcha / CapSolver webhook",
@@ -295,19 +299,31 @@ def probe_url(url: str, timeout: int = 8) -> tuple[int, str]:
         parsed = urlparse(url)
         original_domain = parsed.netloc
         import urllib.request
+        import ssl
         req = urllib.request.Request(
             url, method="HEAD",
             headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"},
         )
         for _ in range(3):
             try:
-                with urllib.request.urlopen(req, timeout=timeout) as resp:
+                # Disable SSL verification purely for the probe to bypass local MITM proxies
+                ctx = ssl.create_default_context()
+                ctx.check_hostname = False
+                ctx.verify_mode = ssl.CERT_NONE
+                
+                with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
                     final_domain = urlparse(resp.url).netloc
                     if final_domain and final_domain != original_domain:
                         return -1, f"Redirected to {resp.url}"
                     return resp.status, ""
             except urllib.error.HTTPError as e:
+                if e.code in (403, 407):
+                    return e.code, f"Proxy or Firewall Block ({e.code})"
                 return e.code, str(e.reason)
+            except urllib.error.URLError as e:
+                if "CERTIFICATE_VERIFY_FAILED" in str(e.reason) or "proxy" in str(e.reason).lower():
+                    return 0, f"SSL/Proxy Error: {e.reason}"
+                return 0, str(e.reason)
         return 0, "Too many redirects"
     except Exception as e:
         return 0, str(e)[:120]
@@ -438,6 +454,7 @@ class TaskResult:
     has_auth_signal: bool = False
     has_timeout_signal: bool = False
     has_bot_block_signal: bool = False
+    has_firewall_signal: bool = False
 
     # Task Validity Layer
     failure_root: str = ""
@@ -751,6 +768,15 @@ class WebBenchEvaluator:
         result.url_probe_note = probe_note
 
         if http_status == 0:
+            if "SSL/Proxy" in probe_note:
+                logger.warning(f"   URL BLOCKED BY FIREWALL → ENVIRONMENT_LIMIT")
+                result.status = "FAILED"
+                result.failure_root = "ENVIRONMENT_LIMIT"
+                result.task_validity_code = "VALID"
+                result.task_validity_confidence = 1.0
+                result.set_error("Security_FirewallBlocked", f"URL proxy/SSL block: {probe_note}")
+                return result
+                
             logger.warning("   URL UNREACHABLE → TASK_INVALID [URL_Dead]")
             result.status = "FAILED"
             result.failure_root = "TASK_INVALID"
@@ -769,6 +795,15 @@ class WebBenchEvaluator:
             result.set_error("Data_StaleLayout", f"URL redirected: {probe_note}")
             return result
         elif http_status >= 400:
+            if http_status in (403, 407) and "Firewall" in probe_note:
+                logger.warning(f"   URL HTTP {http_status} (Firewall) → ENVIRONMENT_LIMIT")
+                result.status = "FAILED"
+                result.failure_root = "ENVIRONMENT_LIMIT"
+                result.task_validity_code = "VALID"
+                result.task_validity_confidence = 1.0
+                result.set_error("Security_FirewallBlocked", f"HTTP {http_status}")
+                return result
+                
             logger.warning(f"   URL HTTP {http_status} → TASK_INVALID [URL_Dead]")
             result.status = "FAILED"
             result.failure_root = "TASK_INVALID"
@@ -860,6 +895,10 @@ class WebBenchEvaluator:
             result.has_bot_block_signal = any(
                 kw in thoughts_concat for kw in ("403", "access denied", "err_connection_reset", "bot detected")
             )
+            result.has_firewall_signal = any(
+                kw in thoughts_concat or kw in str(history.errors() if history else "").lower() 
+                for kw in ("firewall", "proxy", "certificate verify failed", "err_cert_authority_invalid", "zscaler", "fortinet", "palo alto", "policy block")
+            )
 
             if not history or history.has_errors() or steps == 0:
                 result.status = "FAILED"
@@ -873,7 +912,10 @@ class WebBenchEvaluator:
                 error_lower = last_error.lower()
                 final_lower = result.final_answer.lower()
 
-                if result.has_bot_block_signal or "net::err_connection_reset" in error_lower or "403" in error_lower:
+                if result.has_firewall_signal:
+                    result.set_error("Security_FirewallBlocked", last_error)
+                    result.failure_root = "ENVIRONMENT_LIMIT"
+                elif result.has_bot_block_signal or "net::err_connection_reset" in error_lower or "403" in error_lower:
                     result.set_error("Security_BotBlocked", last_error)
                 elif result.has_captcha_signal:
                     result.set_error("Security_CaptchaFailed", last_error)
@@ -1079,19 +1121,19 @@ def _parse_args() -> argparse.Namespace:
         epilog="""
 Examples:
   # Use Gemini (needs GOOGLE_API_KEY in .env):
-  python eval_tasks_fixed.py --llm-provider gemini --csv webbench_challenge.csv
+  python eval_tasks_fixed.py --llm-provider gemini --csv webbench_ready.csv
 
   # Use Gemini with a specific model:
-  python eval_tasks_fixed.py --llm-provider gemini --llm-model gemini-2.0-flash-exp --csv webbench_challenge.csv
+  python eval_tasks_fixed.py --llm-provider gemini --llm-model gemini-2.0-flash-exp --csv webbench_ready.csv
 
   # Use local DeepSeek (original behaviour):
   python eval_tasks_fixed.py --llm-provider local \\
       --llm-base-url http://103.108.136.157:8000/v1 \\
       --llm-model ./models/DeepSeek-R1-Distill-Qwen-32B-Q4_K_M.gguf \\
-      --step-timeout 1200 --max-steps 5 --csv webbench_challenge.csv
+      --step-timeout 1200 --max-steps 5 --csv webbench_ready.csv
         """,
     )
-    p.add_argument("--csv", default="webbench_challenge.csv")
+    p.add_argument("--csv", default="webbench_clean.csv")
     p.add_argument("--records-per-category", type=int, default=5,    # Changed to 5
                    help="Tasks per category (default: 5)")
     p.add_argument(

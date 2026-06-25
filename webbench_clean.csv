@@ -1,0 +1,43 @@
+ID,Starting URL,Category,Task
+106,https://www.apple.com,READ,"Locate the student discount page for MacBooks. Identify the discounted price of a base model MacBook Pro. Confirm what the eligibility requirements are for the discount and document them.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+592,https://www.freepik.com,READ,"Go to the FAQ or Help section and extract the key points regarding the commercial usage rights for Freepik assets.
+Only use http://freepik.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1374,https://pngtree.com,READ,"Search for ""abstract backgrounds"" and record the top five results including their available file formats (PNG, PSD, etc.).
+Only use http://pngtree.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1984,https://www.uscis.gov,READ,"Explore the section on evidence submission for Form I-90 and summarize the document proof requirements.
+Only use http://uscis.gov to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+783,https://www.homedepot.com,READ,"Use the store locator to search for a Home Depot store near zip code 30339 (Atlanta, GA) and list the store’s hours along with its address.
+Only use http://homedepot.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2376,https://www.bing.com,CREATE,"Ask Bing's AI copilot to create a brief poem about the changing seasons, then save the poem text.
+Only use https://www.bing.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+844,https://www.imdb.com,CREATE,"Rate the movie ""Top Gun: Maverick"" with a score of 9 out of 10.
+Only use http://imdb.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2206,https://www.yellowpages.com,CREATE,"Submit a review for ""Sunshine Salon"" in Orlando, FL with a 5-star rating and a descriptive comment about your experience.
+Only use http://yellowpages.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+843,https://www.imdb.com,CREATE,"Upvote the featured user review for ""Dune: Part Two:
+Only use http://imdb.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2381,https://www.bing.com,CREATE,"Use Bing’s AI copilot to craft a textual description for a conceptual office environment design and record the description text.
+Only use https://www.bing.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2558,https://www.johnlewis.com,UPDATE,"Create a list named 'Home Essentials"" and update the “Home Essentials” list by adding a “Dining Table” from the Furniture section.
+Only use https://www.johnlewis.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1697,https://stackoverflow.com/questions,UPDATE,"Find and answer a question about Python list slicing, then update your previous answer on Python's list slicing by adding new insights and updated code examples.
+Only use http://stackoverflow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+573,https://www.ford.com,UPDATE,"Create a saved vehicle configuration for a Ford Mustang GT Fastback and update the exterior color option from Red to Block; then verify that the configuration summary displays the new color choice.
+Only use http://ford.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1670,https://stackexchange.com,UPDATE,"In the Meta community, write a feedback post giving suggestions to improve the site, then edit your previous feedback post to add further suggestions on improving the site's user interface.
+Only use http://stackexchange.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1628,https://www.springer.com/us,UPDATE,"Adjust your journal notification preferences in your Springer account to receive email updates about ""Online First"" articles instead of the default monthly summary.
+Only use http://springer.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2102,https://www.wikihow.com/Main-Page,DELETE,"Post a test comment in the wikiHow discussion forum about guide improvements, and then delete the comment, ensuring it no longer appears.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+408,https://economictimes.indiatimes.com,DELETE,"Create a temporary watchlist with several stocks, then delete one specific stock from that watchlist and verify its removal.
+Only use http://economictimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1660,https://stackexchange.com,DELETE,"Create a temporary post in the Cross Validated community and delete it using available deletion options, confirming that the post is no longer visible.
+Only use http://stackexchange.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+245,https://www.cnet.com,DELETE,"Post a comment on a CNET article and then delete that comment, confirming its removal from the discussion thread.
+Only use http://cnet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2386,https://www.bing.com,DELETE,"Look up ""Recipe for vegan lasagna"". In your Bing search history, delete the record for the search term ""recipe for vegan lasagna"" and verify it no longer appears.
+Only use https://www.bing.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2369,https://www.bbcgoodfood.com,FILE_MANIPULATION,"From the ""Classic Beef Stew"" recipe page, print the recipe to a PDF file and extract a textual list of the ingredients included.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
