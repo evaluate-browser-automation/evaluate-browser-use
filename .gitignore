@@ -23,7 +23,6 @@ dist/
 # Data files
 *.gif
 *.pdf
-*.json
 *.jsonl
 *.log
 *.bak

@@ -62,6 +62,7 @@ class ChatOpenAI(BaseChatModel):
 	http_client: httpx.AsyncClient | None = None
 	_strict_response_validation: bool = False
 	max_completion_tokens: int | None = 4096
+	max_tokens: int | None = None
 	reasoning_models: list[ChatModel | str] | None = field(
 		default_factory=lambda: [
 			'o4-mini',
@@ -176,6 +177,9 @@ class ChatOpenAI(BaseChatModel):
 
 			if self.max_completion_tokens is not None:
 				model_params['max_completion_tokens'] = self.max_completion_tokens
+
+			if self.max_tokens is not None:
+				model_params['max_tokens'] = self.max_tokens
 
 			if self.top_p is not None:
 				model_params['top_p'] = self.top_p
