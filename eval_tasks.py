@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 import argparse
@@ -41,9 +40,7 @@ except ImportError as e:
     print("  Fix: uv pip install 'browser-use>=0.2.0'\n")
     raise SystemExit(1)
 
-# FIX-CORE: Use browser-use's OWN ChatOpenAI, NOT langchain's.
-# browser-use.llm.openai.ChatOpenAI implements BaseChatModel protocol and passes
-# output_format to the structured JSON schema endpoint correctly.
+
 try:
     from browser_use.llm.openai.chat import ChatOpenAI as BUChatOpenAI
     _BU_OPENAI_AVAILABLE = True
@@ -105,7 +102,6 @@ class RateLimiter:
         return False
 
 
-# FIXED: Removed "./models/" to perfectly match the vLLM server ID
 _LOCAL_MODEL_DEFAULT = "google/gemma-4-E4B-it"
 
 _GEMINI_MODEL_ALIASES: dict[str, str] = {
@@ -151,15 +147,13 @@ def build_llm(args: argparse.Namespace) -> tuple[Any, str, str]:
         model_name = args.llm_model
         logger.info(f"  LLM Provider : browser_use ChatOpenAI → local vLLM (url={args.llm_base_url}  model={model_name})")
 
-        # FIX-CONTEXT-WINDOW: Set max_completion_tokens=None and max_tokens=1024
-        # to support older vLLM servers and clear up space for dense web DOM strings.
         llm = BUChatOpenAI(
             model=model_name,
             base_url=args.llm_base_url,
             api_key=args.llm_api_key,
             temperature=args.llm_temperature,
             max_completion_tokens=None,
-            max_tokens=1024,
+            max_tokens=1024,                     # restored: 512 cut off thinking block mid-JSON
             remove_min_items_from_schema=True,   # vLLM compat
             remove_defaults_from_schema=True,    # smaller schema = fewer parse errors
             add_schema_to_system_prompt=True,    # fallback for models that ignore response_format
@@ -424,7 +418,7 @@ class WebBenchEvaluator:
         llm_temperature: float = 0.0,
         llm_timeout: int = 1200,
         step_timeout: int = 1200,
-        max_steps: int = 5,
+        max_steps: int = 30,
         headless: bool = False,
         disable_security: bool = True,
         chrome_profile_dir: str | None = None,
@@ -750,7 +744,8 @@ class WebBenchEvaluator:
                 use_vision=False,                  # disable vision for local LLMs (no multimodal)
                 use_judge=False,                   # disable judge for local LLMs (saves calls)
                 enable_planning=False,             # disable planning (saves tokens on local models)
-                max_history_items=6,               # limit history to fit 16k context window
+                max_history_items=None,            # None = browser-use manages internally via summarization
+                                                   # safer than any fixed number for max_steps=30 long runs
             )
             if sensitive_data:
                 agent_kwargs["sensitive_data"] = sensitive_data
@@ -942,7 +937,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--llm-temperature", type=float, default=0.0)
     p.add_argument("--llm-timeout", type=int, default=1200)
     p.add_argument("--step-timeout", type=int, default=1200)
-    p.add_argument("--max-steps", type=int, default=20)
+    p.add_argument("--max-steps", type=int, default=30)
     p.add_argument("--max-dom-chars", type=int, default=MAX_DOM_CHARS)
     p.add_argument("--headless", action="store_true", default=False)
     p.add_argument("--no-disable-security", dest="disable_security", action="store_false", default=True)

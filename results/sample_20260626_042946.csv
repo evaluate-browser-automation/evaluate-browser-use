@@ -1,0 +1,227 @@
+ID,website,Category,instruction
+1120,https://www.medicinenet.com,READ,"Search the MedicineNet website for articles on “Type 2 Diabetes” and list the titles of the first five results.
+Only use http://medicinenet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+81,https://www.amazon.com,READ,"Find the product page for ""Amazon Basics AA Batteries"" and record the pack size and pricing information.
+Only use http://amazon.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+756,https://www.healthline.com,READ,"Use the search tool to look for “diabetes management” and output the titles of the first five articles displayed.
+Only use http://healthline.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1130,https://www.menshealth.com,READ,"Browse the homepage and list the titles of the first three articles in the Fitness section.
+Only use http://menshealth.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+577,https://www.foxnews.com,READ,"Use the website’s search function to find an article related to the ""US Economy"" and extract the main points from the introduction.
+Only use http://foxnews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1117,https://www.medicalnewstoday.com,READ,"Search for recent articles on “diabetes management” and list the titles of the first five results.
+Only use http://medicalnewstoday.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+235,https://my.clevelandclinic.org,READ,"Explore the mental health and wellness section. Summarize the support services available for managing stress and anxiety.
+Only use http://clevelandclinic.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2081,https://www.webmd.com,READ,"Find the latest article on diabetes
+Only use http://webmd.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+107,https://www.apple.com,READ,"Find the trade-in value of my iPhone 14 Pro. Its condition is good. 
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+395,https://www.eater.com,READ,"Navigate to the Eater.com homepage and list the titles of the top 5 featured articles displayed.
+Only use http://eater.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1823,https://www.theverge.com,READ,"Navigate to the homepage and list the headlines from the trending news section.
+Only use http://theverge.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1183,https://www.nasdaq.com,READ,"Check the trading summary for the NYSE and record its current value.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2202,https://www.yale.edu,READ,"Browse the ""Research Highlights"" page and list the names of three featured research projects currently showcased.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1202,https://www.nerdwallet.com,READ,"Visit the NerdWallet personal loans comparison page and extract the interest rate ranges for the top five loan options listed.
+Only use http://nerdwallet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2203,https://www.yale.edu,READ,"Navigate to the ""Alumni"" section and list at least two upcoming alumni events along with their scheduled dates.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1709,https://www.statista.com,READ,"Use Statista's search function to look up ""global e-commerce sales"" and list the titles of the top 5 interactive charts displayed.
+Only use http://statista.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2370,https://www.bbcgoodfood.com,READ,"Open the ""Paleo Pancakes"" recipe page and compile a list of the suggested ingredient substitutions provided.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2137,https://www.womenshealthmag.com,READ,"Examine an article about skincare routines and summarize in your own words the recommended daily steps.
+Only use http://womenshealthmag.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2085,https://www.who.int,READ,"Open the WHO home page and locate the latest global health report on COVID-19; list the main findings.
+Only use http://who.int to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1406,https://www.radiotimes.com,READ,"Check Radiotimes for the Sunday morning TV guide and note down all programs airing before 12 PM.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+234,https://my.clevelandclinic.org,READ,"Search for articles on nutrition and healthy eating within the health resources. List the titles of the first three resources you find.
+Only use http://clevelandclinic.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2373,https://www.bbcgoodfood.com,READ,"Navigate to the homepage and list the top 5 trending recipes featured on BBC Good Food.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+108,https://www.apple.com,READ,"Locate the Apple Store locator and find the nearest three Apple stores to New York, New York, Zip Code 10003. For each store, note the address, phone number, and operating hours.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1820,https://www.thesun.co.uk,READ,"Find an opinion column discussing housing policy and list its main arguments as presented in the article.
+Only use http://thesun.co.uk to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1200,https://www.nerdwallet.com,READ,"Find and list the latest personal finance blog posts displayed on NerdWallet’s homepage, noting their titles.
+Only use http://nerdwallet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2175,https://www.worldbank.org/ext/en/home,READ,"Identify and list the main navigation sections presented on the World Bank homepage.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1408,https://www.radiotimes.com,READ,"Browse the Radiotimes homepage to identify the trending topics or featured news items, then highlight the one focused on British soap operas.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2084,https://www.who.int,READ,"Search the “Global Health Observatory” data for the latest epidemiological statistics on influenza and list the top three metrics displayed.
+Only use http://who.int to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+457,https://www.euronews.com,READ,"Search for articles on “Brexit” and extract the publication date and a brief summary of the first article in the search results.
+Only use http://euronews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1405,https://www.radiotimes.com,READ,"Search for the latest article on soap operas on Radiotimes and summarize its headline along with the publication date.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2107,https://www.wikihow.com/Main-Page,READ,"Filter the search results on wikiHow for the term “culinary skills” and list the titles of the first five how-to guides that appear.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2374,https://www.bbcgoodfood.com,READ,"Search for ""BBQ recipes"" and extract the names and short descriptions of the first 5 recipes returned by the search.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+110,https://www.apple.com,READ,"Find out if unlimited repairs are included with the Airpods Pro.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2723,https://www.nhs.uk,READ,"How does an IUD stop pregnancy?
+Only use www.nhs.uk to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2082,https://www.webmd.com,READ,"Find an article about diabetes and note who medically reviewed the article. Return a summary of their educational degree.
+Only use http://webmd.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+580,https://www.foxsports.com,READ,"Search for and summarize the main points from the latest FOX Sports article about the NBA Finals.
+Only use http://foxsports.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2201,https://www.yale.edu,READ,"Browse the Yale homepage and list the main navigation headers (e.g., About, Academics, Research, News, etc.) visible at the top of the page.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+904,https://www.istockphoto.com,READ,"Use advanced filters by going to ""Refine"" to find stock videos of waterfalls with durations under 30 seconds and list the titles of the first 3 results.
+Only use http://istockphoto.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1510,https://www.self.com,READ,"Use the search bar to find articles about ""menstrual health"" and extract the titles and publication dates of the top three results.
+Only use http://self.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+396,https://www.eater.com,READ,"Use the search function on Eater.com to find articles about ""celebrity chefs"" and provide the headlines and publication dates of the first 3 results.
+Only use http://eater.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2104,https://www.wikihow.com/Main-Page,READ,"Browse the “Featured How-To Articles” section on the wikiHow homepage, then list the title and main objective of the highlighted guide.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+106,https://www.apple.com,READ,"Locate the student discount page for MacBooks. Identify the discounted price of a base model MacBook Pro. Confirm what the eligibility requirements are for the discount and document them.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+458,https://www.euronews.com,READ,"Navigate to the EU Policy section and copy and paste into text the introductory paragraph of the featured article.
+Only use http://euronews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1404,https://www.radiotimes.com,READ,"Use Radiotimes to find TV listings for next Friday and list the first three channels along with their scheduled programs.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+163,https://www.betterhealth.vic.gov.au,READ,"Search the website for information on ""diabetes type 2"" and extract three key recommendations from the article.
+Only use http://betterhealth.vic.gov.au to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2173,https://www.worldbank.org/ext/en/home,READ,"Go to ""Projects & Operations"" section in the footer and summarize the top three highlighted global development projects, including their names and objectives.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+109,https://www.apple.com,READ,"Locate the repair manual for the latest MacBook Air model. Determine the table of contents and identify the section on Battery, and return a summarized step by step instruction on how to remove the battery.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1329,https://www.pennmedicine.org,READ,"Access the contact information page and extract the email addresses provided for administrative customer support.
+Only use http://pennmedicine.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2338,https://theconversation.com/us,READ,"Navigate to the Science category and summarize the main argument of the most recent article featured there.
+Only use https://theconversation.com/us to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2174,https://www.worldbank.org/ext/en/home,READ,"Access the ""Projects"" section, select one project summary, and write a brief summary that highlights the project name, country, and main objective.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1824,https://www.theverge.com,READ,"Use the search function to find articles about ""AI ethics"" and provide the titles and publication dates of the first three results.
+Only use http://theverge.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1711,https://www.statista.com,READ,"Navigate to the consumer insights section and list the top five trending consumer demographics highlighted on Statista.
+Only use http://statista.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2583,https://www.msdmanuals.com,READ,"Locate the page showcasing the 3D anatomical models and list two anatomical features labeled on the heart model.
+Only use https://www.msdmanuals.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+456,https://www.euronews.com,READ,"Navigate to the ""Latest"" section and list the headlines of the three most recent articles.
+Only use http://euronews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1116,https://www.medicalnewstoday.com,READ,"Search for articles related to “sleep disorders” and compare two articles’ descriptions of common symptoms; summarize the differences in brief text form.
+Only use http://medicalnewstoday.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1407,https://www.radiotimes.com,READ,"Locate tonight's featured TV schedule on Radiotimes, and list the titles of shows airing on both BBC and ITV.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+952,https://kidshealth.org,READ,"Find the ""Ask an Expert"" information page (if available) and summarize the guidelines on how parents can contact pediatric specialists.
+Only use http://kidshealth.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1822,https://www.thesun.co.uk,READ,"Visit the TV & Showbiz section and extract the titles of articles about celebrity interviews published today.
+Only use http://thesun.co.uk to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+902,https://www.istockphoto.com,READ,"Use the iStock search bar to find stock photos of ""autumn forest"" and list the titles of the first 5 images that appear.
+Only use http://istockphoto.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1509,https://www.self.com,READ,"Navigate to the ""Lifestyle"" section and extract the publication date and author name from the featured article ""The Ultimate Self-Care Routine.""
+Only use http://self.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2337,https://theconversation.com/us,READ,"Use the website’s search bar to locate an article about ""Digital Privacy in the Age of Social Media,"" then list its publication date, author name, and a brief summary.
+Only use https://theconversation.com/us to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2103,https://www.wikihow.com/Main-Page,READ,"Use the wikiHow search bar to find the guide “How to Write a Wiki Article” and summarize two key guidelines featured in its introduction.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+236,https://my.clevelandclinic.org,READ,"Navigate to the Health Education section and list the top 5 articles on heart disease available on the Cleveland Clinic website.
+Only use http://clevelandclinic.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1132,https://www.menshealth.com,READ,"Search for articles about HIIT workouts published within the last month and list the first five titles along with their publication dates.
+Only use http://menshealth.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2372,https://www.bbcgoodfood.com,READ,"Visit the how-to videos section and list the titles of the first 3 cooking technique videos available on the site.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2105,https://www.wikihow.com/Main-Page,READ,"Navigate to the Relationships category on wikiHow and extract both the title and a short summary of the guide “How to Apologize Effectively.”
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2139,https://www.womenshealthmag.com,READ,"Navigate to the ""Fitness"" section and list the titles of the five most recent articles on workout routines.
+Only use http://womenshealthmag.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2204,https://www.yale.edu,READ,"Navigate to the ""About Yale"" section and summarize Yale University's mission statement in your own words.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1330,https://www.pennmedicine.org,READ,"Search for research-related content and list the topics covered in the first three featured research projects in the research section.
+Only use http://pennmedicine.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1119,https://www.medicinenet.com,READ,"Find an article authored by a physician on “diet and nutrition” and list two recommended dietary practices mentioned.
+Only use http://medicinenet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+91,https://www.apa.org,READ,"Access the APA research database portal and list all available databases (such as PsycINFO, PsycARTICLES, PsycTESTS) along with a brief description for each.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2055,https://www.walgreens.com,READ,"Locate the vaccine information page and extract a list of all available immunizations along with any stated age restrictions.
+Only use http://walgreens.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+582,https://www.foxsports.com,READ,"Browse the video highlights section and list the titles of the five most recent NBA highlight videos.
+Only use http://foxsports.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+93,https://www.apa.org,READ,"Use the website’s search function to find articles published in 2022 related to ""clinical psychology"" and output the titles of the first four matches.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+757,https://www.healthline.com,READ,"Search for “cholesterol lowering foods” on Healthline and list the titles of the top three results.
+Only use http://healthline.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2371,https://www.bbcgoodfood.com,READ,"Use the search bar to find ""chocolate cake"" recipes and display the first 5 recipe titles along with their publication dates.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2339,https://theconversation.com/us,READ,"Review the homepage to list three major topics that The Conversation US frequently covers.
+Only use https://theconversation.com/us to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+581,https://www.foxsports.com,READ,"Use the search function to find an article mentioning “March Madness” and output the first two paragraphs of that article.
+Only use http://foxsports.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2106,https://www.wikihow.com/Main-Page,READ,"Use the search function to locate the guide “How to Change a Tire” on wikiHow and extract the safety precautions listed at the beginning of the article.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2205,https://www.yale.edu,READ,"Navigate to the ""Campus Life"" area (if available) and list at least three student organizations or activities highlighted on the page.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+397,https://www.eater.com,READ,"Locate a feature article on international dining scenes and list two featured cities mentioned in the piece.
+Only use http://eater.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1825,https://www.theverge.com,READ,"Search for articles related to ""cryptocurrency"" and list any titles that include the term ""crypto.""
+Only use http://theverge.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2365,https://www.bbcgoodfood.com,CREATE,"Write and submit a comment on the ""Avocado Toast"" recipe that includes a 4-star rating and a brief review of your experience.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2100,https://www.wikihow.com/Main-Page,CREATE,"Login, Goto My Profile > My Drafts, Compose a new article on wikiHow titled “How to Budget Your Monthly Expenses” with step-by-step instructions and practical saving tips.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+88,https://www.apa.org,CREATE,"Subscribe to the APA weekly newsletter by entering your email address on the subscription form available on the homepage.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2099,https://www.wikihow.com/Main-Page,CREATE,"Login, Goto My Profile > My Drafts, Write a new how-to guide on wikiHow called “How to Practice Mindfulness in Daily Life,” ensuring you include a dedicated tip for breathing exercises.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1401,https://www.radiotimes.com,CREATE,"Save your favorite TV schedule listing for tonight by creating a bookmark on Radiotimes and adding a brief note on why you plan to watch that show.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1176,https://www.nasdaq.com,CREATE,"Log in and create a personalized watchlist by adding three companies (e.g., Apple Inc., Tesla, and Amazon) to monitor their real-time performance.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+89,https://www.apa.org,CREATE,"Build a personal reading list in your APA account by adding three selected articles from the psychology research section, ensuring at least one article is from PsycARTICLES.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2366,https://www.bbcgoodfood.com,CREATE,"Create a new recipe collection titled ""Weekend Brunch"" and add the ""Banana Pancakes"" and ""Shakshuka"" recipes to it.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1400,https://www.radiotimes.com,CREATE,"Use the social media sharing buttons on a Radiotimes article to generate a shareable link and create a custom message endorsing the article.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2098,https://www.wikihow.com/Main-Page,CREATE,"Login, Goto My Profile > My Drafts > Write An Article, Create a new draft article on wikiHow titled “How to Improve Your Remote Work Setup” that includes a clear introduction and at least five sequential steps.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1177,https://www.nasdaq.com,CREATE,"In the Investor Relations' Contact Us page, submit a request for more detailed financial information for a selected company (e.g., Meta Platforms).
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1402,https://www.radiotimes.com,CREATE,"Sign up for early access notifications (if available) for special features on upcoming streaming releases by filling in your contact details and confirming registration.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1178,https://www.nasdaq.com,DELETE,"Log in, add Apple Inc. to your watchlist, then remove it from your personalized watchlist and verify that it no longer appears in your list.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1403,https://www.radiotimes.com,DELETE,"Navigate to your newsletter subscription settings on Radiotimes and unsubscribe from the weekly news digest, confirming successful removal via the displayed message.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2368,https://www.bbcgoodfood.com,DELETE,"Log in, post a comment under a grilled chicken recipe, then delete that comment. 
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2101,https://www.wikihow.com/Main-Page,DELETE,"Log in to your wikiHow account, create a test draft titled “Temporary Guide for Testing,” then delete the draft and confirm its removal from your drafts list.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2367,https://www.bbcgoodfood.com,DELETE,"Log in, create a “Quick Pasta” recipe collection and add 3 pasta recipes, then delete the recipe collection and confirm it is gone
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2102,https://www.wikihow.com/Main-Page,DELETE,"Post a test comment in the wikiHow discussion forum about guide improvements, and then delete the comment, ensuring it no longer appears.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1184,https://www.nasdaq.com,UPDATE,"Log in, create a personalized watchlist, then access your personalized watchlist and update it by adding ""Tesla"" and ""Alphabet Inc."" to reflect your current interests.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2108,https://www.wikihow.com/Main-Page,UPDATE,"Log in to your wikiHow account and update your profile by adding a new biography that highlights your recent how-to contributions.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+96,https://www.apa.org,UPDATE,"Modify your APA account’s newsletter preferences to switch from bi-weekly updates to monthly summaries.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2110,https://www.wikihow.com/Main-Page,UPDATE,"Create a draft for “How to Develop a Morning Routine” on wikiHow, and update the draft with an additional final step.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1409,https://www.radiotimes.com,UPDATE,"Log in to your Radiotimes newsletter subscription portal and update your email preferences to receive only UK entertainment news, then verify the confirmation message.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1411,https://www.radiotimes.com,UPDATE,"If an account/profile section is available, update your settings to receive personalized recommendations for evening TV shows.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+1410,https://www.radiotimes.com,UPDATE,"Access your Radiotimes account and update your saved TV schedules by switching the default time format from 12-hour to 24-hour, confirming the change afterward.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2109,https://www.wikihow.com/Main-Page,UPDATE,"Log in, create a draft for “How to Improve Your Remote Work Setup”, then edit your draft article by logging in and going to My Profile > My Drafts and looking for “How to Improve Your Remote Work Setup” to add a new section on ergonomic workspace tips, then save the changes with an edit summary.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2168,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Find and download a PDF report from the ""Research"" section that discusses global economic trends, confirming that the file name includes ""Economic.""
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2369,https://www.bbcgoodfood.com,FILE_MANIPULATION,"From the ""Classic Beef Stew"" recipe page, print the recipe to a PDF file and extract a textual list of the ingredients included.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2169,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Search for and download a policy document available in PDF format that focuses on environmental policies.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2166,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Download the latest annual World Bank report available in PDF format from the ""Publications"" or ""Reports"" section.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."
+2171,https://www.worldbank.org/ext/en/home,FILE_MANIPULATION,"Search for a research paper on ""Climate Change Adaptation"" published on the site and download the corresponding PDF file.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site."

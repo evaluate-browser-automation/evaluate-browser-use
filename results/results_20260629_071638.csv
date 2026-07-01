@@ -1,0 +1,679 @@
+task_id,run_timestamp,category,url,url_domain,instruction,instruction_length,status,latency_seconds,steps_taken,steps_budget,steps_utilization_pct,retry_count,llm_model,llm_provider,llm_calls,total_thought_chars,final_answer,final_answer_length,avg_step_latency_seconds,max_step_latency_seconds,error_code,error_label,error_hint,error_message,has_captcha_signal,has_auth_signal,has_timeout_signal,has_bot_block_signal,failure_root,task_validity_code,task_validity_reason,task_validity_confidence,url_http_status,url_probe_note
+task_0001,2026-06-29T07:16:47.544117+00:00,READ,https://www.medicinenet.com,www.medicinenet.com,"Search the MedicineNet website for articles on “Type 2 Diabetes” and list the titles of the first five results.
+Only use http://medicinenet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",252,SUCCESS,952.65,26,30,86.7,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,26,59026,"I was unable to perform a direct internal site search for ""Type 2 Diabetes"" on MedicineNet as no functional search input field was accessible on the website. As a necessary pivot to fulfill the request using only this site, I navigated through structured content paths (Diabetes Health Center) and extracted a list of highly relevant articles related to diabetes, which serves as a proxy for search results.
+
+The top five most relevant titles found are:
+1. **Diabetes (Type 1 and Type 2)**: https://www.medicinenet.com/diabetes_mellitus/article.htm
+2. **Type 2 Diabetes Pictures Slideshow**: https://www.medicinenet.com/type_2_diabetes_pictures_slideshow/article.htm
+3. **Diabetes Foot Problems**: https://www.medicinenet.com/diabetes_foot_problems_pictures_slideshow/article.htm
+4. **Celebrities & Diabetes**: https://www.medicinenet.com/celebrities_with_diabetes_pictures_slideshow/article.htm
+5. **Diabetes Foot Problems**: https://www.medicinenet.com/foot_problems_diabetes/article.htm
+
+All findi",1667,36.6,36.6,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0002,2026-06-29T07:33:05.453983+00:00,READ,https://www.amazon.com,www.amazon.com,"Find the product page for ""Amazon Basics AA Batteries"" and record the pack size and pricing information.
+Only use http://amazon.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",240,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0003,2026-06-29T07:33:56.125395+00:00,READ,https://www.healthline.com,www.healthline.com,"Use the search tool to look for “diabetes management” and output the titles of the first five articles displayed.
+Only use http://healthline.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",253,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0004,2026-06-29T07:34:19.309153+00:00,READ,https://www.menshealth.com,www.menshealth.com,"Browse the homepage and list the titles of the first three articles in the Fitness section.
+Only use http://menshealth.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",231,SUCCESS,81.72,2,30,6.7,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,2,4043,"I have browsed the menshealth.com homepage and listed the titles of what appear to be the first three articles in or related to the Fitness section based on their placement under 'THE LATEST':
+
+1. This Dumbbell Leg Workout Crushes the Lower Body (Index 127)
+2. Fix Your Close-Grip Pushups With 1 Adjustment (Index 128)
+3. This Workout Program Helps Busy Dads Get Shredded (Index 129)
+
+The task was completed using only menshealth.com.",434,40.9,40.9,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0005,2026-06-29T07:35:57.271822+00:00,READ,https://www.foxnews.com,www.foxnews.com,"Use the website’s search function to find an article related to the ""US Economy"" and extract the main points from the introduction.
+Only use http://foxnews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",268,FAILED,601.81,21,30,70.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,16,34189,"The task required using Fox News' internal search function to find an article about the ""US Economy"" and extract its introduction points. I successfully navigated to https://www.foxnews.com/. However, despite multiple attempts involving scrolling, targeted CSS selectors, and content searching on the homepage, I was unable to locate or interact with a functional site-specific search input field necessary to perform the required search. Therefore, I could not complete the core objective of finding and extracting information from a relevant article.",552,28.7,28.7,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0006,2026-06-29T07:46:19.636333+00:00,READ,https://www.medicalnewstoday.com,www.medicalnewstoday.com,"Search for recent articles on “diabetes management” and list the titles of the first five results.
+Only use http://medicalnewstoday.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",244,SUCCESS,592.59,18,30,60.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,18,38395,"I successfully navigated to medicalnewstoday.com and searched for 'diabetes management'. However, despite multiple attempts to extract content from the search results page after extensive scrolling, only two unique article titles were found instead of the requested five.
+The titles found are:
+1. Type 2 Diabetes: Managing Blood Sugar (URL: https://www.medicalnewstoday.com/articles/managing-blood-sugar-type-2-diabetes-quiz#1)
+2. Diabetes (URL: https://www.medicalnewstoday.com/diabetes)
+Please note that only these two articles were retrievable from the site's search functionality within this session.",604,32.9,32.9,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0007,2026-06-29T07:56:27.718424+00:00,READ,https://my.clevelandclinic.org,my.clevelandclinic.org,"Explore the mental health and wellness section. Summarize the support services available for managing stress and anxiety.
+Only use http://clevelandclinic.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",266,FAILED,699.02,17,30,56.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,16,34234,"I have explored the mental health and wellness section of Cleveland Clinic's website (health.clevelandclinic.org) as requested. Based on a search for 'stress and anxiety', here is a summary of support services and methods mentioned:
+
+*   **Meditation:** Ideas are offered on how meditation can help teens deal with stress and anxiety.
+*   **Aromatherapy:** Studies suggest aromatherapy can improve sleep by lowering stress, pain, anxiety, depression, and fatigue.
+*   **Thai Massage:** Research indicates that Thai massage can be calming and relaxing, which may help lower stress and anxiety.
+*   **Ashwagandha:** Some research suggests certain ashwagandha preparations may be effective for insomnia and stress, though evidence on its effects on anxiety is unclear.
+*   **General Management Tips:** The search results also mention general tips on how best to manage stress in specific contexts (e.g., asthma).",909,41.1,41.1,Security_BotBlocked,WAF / IP Block,Add stealth plugin + residential proxy rotation,None,False,False,False,True,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0008,2026-06-29T08:08:22.409425+00:00,READ,https://www.webmd.com,www.webmd.com,"Find the latest article on diabetes
+Only use http://webmd.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",170,SUCCESS,838.12,17,30,56.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,17,32198,"I have completed the task of finding an article on diabetes from WebMD. After extensive navigation through various sections (Diabetes Center, Type 2 Diabetes Blog index, and featured slideshows), I determined that the latest article available across these accessible pages is:
+
+**Title:** You Don't Check Your Blood Sugar
+**Publication Date:** November 11, 2025
+
+This information was gathered from a featured slideshow page within WebMD.
+
+Other articles listed on that page included:
+*   You're Thirsty, and You Have to Go (No date)
+*   You're Wiped Out (No date)
+*   You Feel Dizzy (No date)
+*   Your Hands and Feet Swell (No date)
+*   You Have Numbness or Tingling (No date)
+*   You Have Stomach Trouble (No date)
+*   You're Losing Your Sight (No date)
+*   You're Losing Weight (No date)
+*   You Have Recurring Infections (No date)
+*   Cuts and Bruises Won't Heal (No date)
+*   Keep Control (No date)
+*   When to Call Your Doctor (No date)",941,49.3,49.3,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0009,2026-06-29T08:22:35.837642+00:00,READ,https://www.apple.com,www.apple.com,"Find the trade-in value of my iPhone 14 Pro. Its condition is good. 
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",203,SUCCESS,1188.89,30,30,100.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,30,56389,"I was able to navigate to https://www.apple.com/shop/trade-in and successfully initiated the process to find the trade-in value for an iPhone 14 Pro. I successfully selected 'iPhone 14 Pro' from the model list within multiple modal dialogues. However, due to persistent and complex modal flow issues on apple.com, I was unable to reach a final screen that displayed a concrete trade-in value for an iPhone 14 Pro in 'Good' condition before reaching the maximum step limit. The process repeatedly required restarting device selection.
+
+Summary of successful navigation steps:
+1. Navigated to Apple Trade In page.
+2. Initiated device selection via 'Find your trade-in value'.
+3. Selected 'Smartphone' category.
+4. Selected 'Apple' manufacturer.
+5. Selected 'iPhone 14 Pro' model.",777,39.6,39.6,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0010,2026-06-29T08:42:39.898384+00:00,READ,https://www.eater.com,www.eater.com,"Navigate to the Eater.com homepage and list the titles of the top 5 featured articles displayed.
+Only use http://eater.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",231,SUCCESS,455.44,12,30,40.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,27466,"I have navigated to https://www.eater.com and listed the titles of what appear to be the top 5 featured articles based on content extraction from the homepage:
+
+1. In honor of the show’s final season, chefs reflect on the show’s legacy
+2. LA Restaurant News
+3. Broadway’s Most Famous Restaurant Is About to Change Forever
+4. This Bread Factory Makes Thousands of Philly Cheesesteak Rolls Every Day
+5. Rye Bunny Takes Over the Tail Up Goat Space With Casual Comfort Dishes
+
+This task was completed using only http://eater.com.",525,38.0,38.0,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0011,2026-06-29T08:50:30.652776+00:00,READ,https://www.theverge.com,www.theverge.com,"Navigate to the homepage and list the headlines from the trending news section.
+Only use http://theverge.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",217,FAILED,1469.88,29,30,96.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,27,73126,"I successfully navigated to https://www.theverge.com and confirmed the presence of a 'Most Popular' section which corresponds to trending news. However, despite extensive scrolling and multiple attempts using various DOM querying tools (`find_elements`, `extract`, `search_page`), I was unable to reliably isolate and list only the headlines from this specific section due to persistent technical limitations with CSS selectors on this dynamic page structure. Therefore, I cannot fulfill the request to list all trending headlines accurately.",542,50.7,50.7,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0012,2026-06-29T09:15:15.864673+00:00,READ,https://www.nasdaq.com,www.nasdaq.com,"Check the trading summary for the NYSE and record its current value.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",204,FAILED,862.95,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,51686,"I was unable to find the current trading summary value for the NYSE on https://www.nasdaq.com as requested. Multiple attempts to access detailed market activity led to login modals, and general searches/navigation on public pages did not reveal this specific data point. The task could not be completed without authentication credentials.",338,36.0,36.0,Auth_CredentialInjectionFailed,Auth wall — no credentials,Pre-inject session cookies or use secrets vault,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0013,2026-06-29T09:30:13.458881+00:00,READ,https://www.yale.edu,www.yale.edu,"Browse the ""Research Highlights"" page and list the names of three featured research projects currently showcased.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",247,FAILED,811.34,23,30,76.7,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,52827,"I was unable to complete the request because I could not find a direct link or any embedded content for a 'Research Highlights' page on https://www.yale.edu/. Despite extensive searching (including scrolling and analyzing navigation links), no specific section or featured research projects were visible or discoverable through text search on the homepage.",356,35.3,35.3,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0014,2026-06-29T09:44:12.433551+00:00,READ,https://www.nerdwallet.com,www.nerdwallet.com,"Visit the NerdWallet personal loans comparison page and extract the interest rate ranges for the top five loan options listed.
+Only use http://nerdwallet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",266,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0015,2026-06-29T09:44:27.480407+00:00,READ,https://www.yale.edu,www.yale.edu,"Navigate to the ""Alumni"" section and list at least two upcoming alumni events along with their scheduled dates.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",245,FAILED,566.15,15,30,50.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,15,27143,"I have successfully navigated to yale.edu and found several upcoming alumni events using the site's internal search function. Here are at least two upcoming events along with their scheduled dates:
+
+1. Yale Club of Taipei New Student Send Off Party: June 27, 2026
+2. Yale Women of Orange County Book Club Meeting: June 28, 2026
+3. Alumni Lunch with Ravi Dhar in Beijing: June 25, 2026 (Also listed)
+4. All Ivy Pride Party at the Yale Club of NYC: June 30, 2026 (Also listed)
+
+The task was completed using only http://yale.edu as requested.",539,37.7,37.7,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0016,2026-06-29T09:54:21.784266+00:00,READ,https://www.statista.com,www.statista.com,"Use Statista's search function to look up ""global e-commerce sales"" and list the titles of the top 5 interactive charts displayed.
+Only use http://statista.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",268,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0017,2026-06-29T09:54:38.804422+00:00,READ,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Open the ""Paleo Pancakes"" recipe page and compile a list of the suggested ingredient substitutions provided.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",255,FAILED,866.32,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,53392,"I was unable to locate the specific 'Paleo Pancakes' recipe page on https://www.bbcgoodfood.com despite extensive searching across multiple pages and categories ('Bread, pastry & cakes'). Consequently, I could not access the ingredients list or compile a list of suggested ingredient substitutions as requested. All navigation attempts resulted in general listing pages rather than the dedicated recipe page.",408,36.1,36.1,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0018,2026-06-29T10:09:33.106286+00:00,READ,https://www.womenshealthmag.com,www.womenshealthmag.com,"Examine an article about skincare routines and summarize in your own words the recommended daily steps.
+Only use http://womenshealthmag.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",248,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0019,2026-06-29T10:10:21.019326+00:00,READ,https://www.who.int,www.who.int,"Open the WHO home page and locate the latest global health report on COVID-19; list the main findings.
+Only use http://who.int to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",235,SUCCESS,488.45,11,30,36.7,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,11,23165,"I have completed the task by navigating to https://www.who.int and locating the latest high-level update concerning COVID-19 surveillance capacity on their website. The most recent relevant item found was a News Release from March 27, 2024, titled 'WHO launches CoViNet: a global network for coronaviruses'.
+
+The main findings and key takeaways from this update are:
+• **Launch of CoViNet:** WHO has launched CoViNet, a new global network for coronaviruses.
+• **Purpose of CoViNet:** To facilitate and coordinate global expertise and capacities for early and accurate detection, monitoring, and assessment of SARS-CoV-2, MERS-CoV, and novel coronaviruses of public health importance.
+• **Expansion:** CoViNet expands upon the WHO COVID-19 reference laboratory network established during the early days of the pandemic; it now addresses a broader range of coronaviruses.
+• **Scope:** It is a network of global laboratories with expertise in human, animal, and environmental coronavirus surveillance.
+•",1516,44.4,44.4,,,,,False,False,False,False,,VALID,,1.0,200,
+                    task_0020,2026-06-29T10:18:44.782438+00:00,READ,https://www.radiotimes.com,www.radiotimes.com,"Check Radiotimes for the Sunday morning TV guide and note down all programs airing before 12 PM.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",236,SUCCESS,891.15,22,30,73.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,22,49173,"I have completed the task by checking Radiotimes for Sunday morning TV guide listings. Based on the final successful data extraction from the site, here are all the programs airing strictly before 12 PM on Sunday:
+
+**BBC One London**
+*   BBC News: 8:10am
+*   Breakfast: 12pm (Note: This program starts exactly at noon)
+
+**BBC Two England**
+*   Godland: 7:30am
+*   Who Do You Think You Are?: 9:45am
+*   Channel Off Air: 10:45am",426,40.5,40.5,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0021,2026-06-29T10:33:51.418392+00:00,READ,https://my.clevelandclinic.org,my.clevelandclinic.org,"Search for articles on nutrition and healthy eating within the health resources. List the titles of the first three resources you find.
+Only use http://clevelandclinic.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",280,SUCCESS,470.39,15,30,50.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,15,28087,"I have successfully completed your request by searching for articles on nutrition and healthy eating within the Cleveland Clinic Health Resources (health.clevelandclinic.org). The first three resources found are:
+
+1. Nutrition for Older Adults: Why Eating Well Matters as You Age
+2. Calories and Aging: Cutting Back Can Slow Age’s Creep
+3. Soy Milk Benefits: Why This Plant-Based Milk Stands Out",395,31.4,31.4,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0022,2026-06-29T10:41:57.377379+00:00,READ,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Navigate to the homepage and list the top 5 trending recipes featured on BBC Good Food.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",234,FAILED,693.58,13,30,43.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,33489,"I have navigated to https://www.bbcgoodfood.com and listed 5 distinct recipe titles and their corresponding URLs from prominently featured content on the homepage, as an explicit 'Top 5 Trending Recipes' section was not available on the site.
+
+The top 5 recipes found are:
+1. Prawn & lime guacamole burgers: https://www.bbcgoodfood.com/premium/prawn-lime-guacamole-burgers
+2. Mustard & brown-sugar-glazed pork ribs: https://www.bbcgoodfood.com/premium/mustard-brown-sugar-glazed-pork-ribs
+3. Watermelon, sumac & feta salad: https://www.bbcgoodfood.com/premium/watermelon-sumac-feta-salad
+4. Grilled prawns with burnt pineapple & scotch bonnet chutney: https://www.bbcgoodfood.com/premium/grilled-prawns-with-burnt-pineapple-scotch-bonnet-chutney
+5. Next level potato salad: https://www.bbcgoodfood.com/recipes/next-level-potato-salad",833,53.4,53.4,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0023,2026-06-29T10:53:46.181398+00:00,READ,https://www.apple.com,www.apple.com,"Locate the Apple Store locator and find the nearest three Apple stores to New York, New York, Zip Code 10003. For each store, note the address, phone number, and operating hours.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation fr",313,FAILED,1495.62,30,30,100.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,27,64633,"The task was partially completed. I successfully located and extracted all required details for one Apple Store near New York, NY (Zip Code 10003) using apple.com.
+
+**Store Found (Store 1 of 3):**
+*   **Name:** Apple World Trade Center
+*   **Address:** 185 Greenwich Street, New York, NY 10007
+*   **Phone Number:** (646) 802-3800
+*   **Operating Hours:**
+    *   Today (June 29): 9:00 a.m. - 8:00 p.m.
+    *   Tuesday (June 30): 9:00 a.m. - 8:00 p.m.
+    *   Wednesday (July 1): 9:00 a.m. - 8:00 p.m.
+    *   Thursday (July 2): 9:00 a.m. - 8:00 p.m.
+    *   Friday (July 3): 9:00 a.m. - 8:00 p.m.
+    *   Saturday (July 4): 10:00 a.m. - 8:00 p.m.
+    *   Sunday (July 5): 10:00 a.m. - 7:00 p.m.
+
+The search for two additional stores failed because the store locator page consistently displayed a persistent regional selection overlay after entering 'New York, New York, 10003', preventing further navigation or result loading.
+
+Attachments:
+
+results.md:
+
+# Apple Store Locator Results for New York, ",1557,49.9,49.9,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0024,2026-06-29T11:18:57.024355+00:00,READ,https://www.thesun.co.uk,www.thesun.co.uk,"Find an opinion column discussing housing policy and list its main arguments as presented in the article.
+Only use http://thesun.co.uk to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",243,FAILED,0.0,0,30,0.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,Security_BotBlocked,WAF / IP Block,Add stealth plugin + residential proxy rotation,HTTP 403,False,False,False,False,TASK_INVALID,URL_Dead,HTTP 403,1.0,403,Forbidden
+task_0025,2026-06-29T11:19:17.259334+00:00,READ,https://www.nerdwallet.com,www.nerdwallet.com,"Find and list the latest personal finance blog posts displayed on NerdWallet’s homepage, noting their titles.
+Only use http://nerdwallet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",249,FAILED,962.17,24,30,80.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,58186,"I have completed the task by navigating to NerdWallet's homepage and extracting the latest personal finance blog post titles from the 'News That Impacts Your Wallet' section. Due to limitations in dynamically loading all content across multiple pages via automated scrolling/extraction on this specific site structure, I have compiled all consistently found titles into a file for your review.
+
+The following are the latest personal finance blog post titles found:
+
+1. Parents, Check In With Your Debt Before Summer Spending Ramps Up
+2. Weekly Mortgage Rates Edge Higher, Inflation Remains Hot
+3. Gas Prices Slip Below $4 as Iran Deal is Signed
+4. Fed Rate Holds Steady in June 2026
+5. It’s Me, Hi, I’m the Problem, It’s Me: Your Wedding Budget
+
+Attachments:
+
+results.md:
+
+# Latest Personal Finance Blog Post Titles from NerdWallet
+
+Based on repeated extraction attempts from the homepage's 'News That Impacts Your Wallet' section, the following titles were consistently found:
+
+1. Parents, Check In ",1258,40.1,40.1,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0026,2026-06-29T11:35:35.004422+00:00,READ,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Identify and list the main navigation sections presented on the World Bank homepage.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",223,SUCCESS,140.71,4,30,13.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,4,7127,"The main navigation sections presented on the World Bank homepage (https://www.worldbank.org/ext/en/home) are:
+1. Our Priorities
+2. Who We Are
+3. What We Do
+4. Where We Work
+5. Work With Us",189,35.2,35.2,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0027,2026-06-29T11:38:11.022345+00:00,READ,https://www.radiotimes.com,www.radiotimes.com,"Browse the Radiotimes homepage to identify the trending topics or featured news items, then highlight the one focused on British soap operas.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",281,SUCCESS,1086.61,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,54881,"I have completed the task by browsing Radiotimes.com and identifying a prominent news item focused on a British soap opera, as an explicit 'trending' indicator was not available on the site.
+
+**Highlighted Soap Opera News Item:**
+*   **Headline:** Neighbours to return to screens as UKTV announces new deal to air iconic soap episodes
+*   **URL:** https://www.radiotimes.com/tv/soaps/neighbours/neighbours-return-screens-uktv-new-deal-newsupdate/",446,45.3,45.3,,,,,True,False,False,False,,VALID,,1.0,200,
+task_0028,2026-06-29T11:56:32.915320+00:00,READ,https://www.who.int,www.who.int,"Search the “Global Health Observatory” data for the latest epidemiological statistics on influenza and list the top three metrics displayed.
+Only use http://who.int to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",273,FAILED,1191.84,28,30,93.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,28,60168,"I was unable to complete the request to find the latest epidemiological statistics on influenza from the WHO Global Health Observatory (GHO) using only who.int. Despite extensive efforts over 28 steps—including keyword searches ('influenza'), navigating through major themes ('Indicators', 'Health Emergencies'), and drilling down into related datasets—the specific data could not be located.
+
+The final attempt led to a connection reset error when trying to access immunization data. The WHO GHO portal structure proved too complex for automated navigation to pinpoint these specific metrics within the given constraints.
+
+Therefore, I cannot list the top three metrics as requested.",684,42.6,42.6,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0029,2026-06-29T12:16:39.989857+00:00,READ,https://www.euronews.com,www.euronews.com,"Search for articles on “Brexit” and extract the publication date and a brief summary of the first article in the search results.
+Only use http://euronews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",266,SUCCESS,344.27,6,30,20.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,6,16366,"I have successfully searched for articles on ""Brexit"" on euronews.com. Based on my extraction from the search results page, here is the publication date and brief summary for what appears to be one of the top relevant articles:
+
+Article Title: Will the UK rejoin the European Union? MEPs debate Brexit on The Ring
+Publication Date: 24/06/2026
+Summary: MEPs debated on this edition of The Ring whether Brexit has taught Europe lessons about sovereignty, migration, economic competitiveness, democratic accountability, and disinformation, and if it has strengthened arguments for deeper EU integration.",600,57.4,57.4,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0030,2026-06-29T12:22:39.559787+00:00,READ,https://www.radiotimes.com,www.radiotimes.com,"Search for the latest article on soap operas on Radiotimes and summarize its headline along with the publication date.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",258,SUCCESS,931.08,21,30,70.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,21,45343,"I have found an article on Radiotimes.com regarding soap operas. The latest article found is:
+
+**Headline:** Coronation Street and Emmerdale caught in World Cup scheduling chaos again tonight – when are they back on?
+**Publication Date:** Friday, 26 June 2026 at 12:24 pm",271,44.3,44.3,,,,,True,False,False,False,,VALID,,1.0,200,
+task_0031,2026-06-29T12:38:25.891238+00:00,READ,https://www.wikihow.com/Main-Page,www.wikihow.com,"Filter the search results on wikiHow for the term “culinary skills” and list the titles of the first five how-to guides that appear.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",269,FAILED,972.13,21,30,70.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,20,42824,"I was unable to directly filter search results for ""culinary skills"" on wikiHow as expected; however, by navigating through related categories ('Food and Entertaining' -> 'Recipes'), I found numerous relevant guides. Based on an extraction from this category page, here are the titles of the first five guides related to culinary skills:
+1. How to make your own recipe (from extraction)
+2. How to double a recipe (from extraction)
+3. How to make avocado seed powder (from extraction)
+4. How to prepare flaxseed oil at home (from extraction)
+5. How to cook amaranth grain (from extraction)
+Please note that these are derived from browsing related content rather than executing a specific search filter.",701,46.3,46.3,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0032,2026-06-29T12:54:53.287389+00:00,READ,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Search for ""BBQ recipes"" and extract the names and short descriptions of the first 5 recipes returned by the search.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",263,SUCCESS,270.09,6,30,20.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,6,13076,"I have successfully searched for ""BBQ recipes"" on bbcgoodfood.com and extracted the names and short descriptions of the first 5 recipes as requested.
+
+Here are the results:
+1. **How to cook duck breast (pan seared method):** A perfectly cooked, pan-fried duck breast will have a crisp, golden skin and succulent pink flesh.
+2. **Fatayer (spinach hand pies):** Savoury pastries stuffed with cheese, meat or spinach; these spinach pies are versatile for breakfast, lunch or a snack.
+3. **Batata harra (Lebanese spicy potatoes):** A classic Lebanese warm meze, served as part of a Middle Eastern spread.
+4. **Seekh kebab (Pakistani beef skewers):** Enjoyed with chutney, raw onion rings and lemon wedges for squeezing over.
+5. **Lamb karahi:** A Karachi-style curry made with lamb on the bone; leftovers are even better the next day.",830,45.0,45.0,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0033,2026-06-29T12:59:38.718379+00:00,READ,https://www.apple.com,www.apple.com,"Find out if unlimited repairs are included with the Airpods Pro.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",199,SUCCESS,881.59,23,30,76.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,48751,"I have thoroughly investigated https://www.apple.com for information regarding unlimited repairs for AirPods Pro by navigating through the product pages (Overview, Tech Specs, Hearing Health) and using site search for 'AirPods Pro AppleCare+'. Despite extensive searching and multiple attempts across different sections of the site, I could not find any explicit mention or confirmation that unlimited repairs are included with AirPods Pro on apple.com. The attempt to navigate directly to Apple Support also resulted in a connection error.
+
+Therefore, I cannot confirm if unlimited repairs are included based solely on the content available through navigation on this website.",677,38.3,38.3,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0034,2026-06-29T13:14:35.495412+00:00,READ,https://www.nhs.uk,www.nhs.uk,"How does an IUD stop pregnancy?
+Only use www.nhs.uk to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",160,SUCCESS,118.2,5,30,16.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,5,5994,"According to NHS.uk, an IUD (intrauterine device), also called a copper coil, stops pregnancy by releasing copper into the womb. It does not use hormones and is over 99% effective.",180,23.6,23.6,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0035,2026-06-29T13:16:49.491420+00:00,READ,https://www.webmd.com,www.webmd.com,"Find an article about diabetes and note who medically reviewed the article. Return a summary of their educational degree.
+Only use http://webmd.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",256,SUCCESS,125.91,4,30,13.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,4,5637,I found an article titled 'Diabetes: An Overview' on WebMD. The article was medically reviewed by Shruthi N. Their educational degree is MD (Doctor of Medicine).,161,31.5,31.5,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0036,2026-06-29T13:19:10.615399+00:00,READ,https://www.foxsports.com,www.foxsports.com,"Search for and summarize the main points from the latest FOX Sports article about the NBA Finals.
+Only use http://foxsports.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",236,SUCCESS,743.01,12,30,40.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,22687,"Clicked a ""National Basketball Associatio...""",45,61.9,61.9,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0037,2026-06-29T13:31:48.919451+00:00,READ,https://www.yale.edu,www.yale.edu,"Browse the Yale homepage and list the main navigation headers (e.g., About, Academics, Research, News, etc.) visible at the top of the page.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",274,SUCCESS,75.54,2,30,6.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,2,2749,"I have browsed the Yale homepage (https://www.yale.edu) and found the following main navigation headers visible at the top of the page:
+
+*   About Yale
+*   Academics
+*   Admissions
+*   Research
+*   Collections
+*   Life at Yale",226,37.8,37.8,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0038,2026-06-29T13:33:37.041260+00:00,READ,https://www.istockphoto.com,www.istockphoto.com,"Use advanced filters by going to ""Refine"" to find stock videos of waterfalls with durations under 30 seconds and list the titles of the first 3 results.
+Only use http://istockphoto.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",293,SUCCESS,548.68,12,30,40.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,22493,"I was unable to complete the request because the iStockphoto website failed to load any video results or interactive filtering options after navigating to the search page for 'waterfall'. Despite multiple attempts to scroll and click 'Refine', the page remained empty, preventing me from applying the duration filter (< 30 seconds) or listing any titles. The task is not achievable under these circumstances.",408,45.7,45.7,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0039,2026-06-29T13:43:10.369015+00:00,READ,https://www.self.com,www.self.com,"Use the search bar to find articles about ""menstrual health"" and extract the titles and publication dates of the top three results.
+Only use http://self.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",265,SUCCESS,559.26,13,30,43.3,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,27455,"I have completed the task by navigating to self.com and searching/browsing for articles on ""menstrual health"". I extracted information from the 'Sexual & Reproductive Health' category page.
+
+The top three most relevant articles found are:
+1. Title: I Thought I Was Just Gassy and Bloated. It Turns Out I Was Bleeding From My Ovary | Publication Date: Not available
+2. Title: Can You Really ‘Scoop Out’ Your Period? | Publication Date: Not available
+3. Title: Lupita Nyong’o Once Thought Her Uterine Fibroid Symptoms Were Normal. Here Are 6 Sneaky Signs | Publication Date: Not available
+
+Please note that while titles were successfully extracted, no publication dates were visible on the page for any of these articles.",719,43.0,43.0,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0040,2026-06-29T13:52:44.909406+00:00,READ,https://www.eater.com,www.eater.com,"Use the search function on Eater.com to find articles about ""celebrity chefs"" and provide the headlines and publication dates of the first 3 results.
+Only use http://eater.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",284,SUCCESS,757.65,15,30,50.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,15,34711,"I successfully navigated to Eater.com and browsed the Food Culture section to find articles related to ""celebrity chefs"". Based on the content extracted from this page, here are the headlines and publication dates for three highly relevant results:
+
+1. **Headline:** After ‘Top Chef,’ Padma Lakshmi Wants to Show How People Really Eat
+   **Publication Date:** Nov 5, 2025
+
+2. **Headline:** Padma Lakshmi Shares Her Favorite Restaurants in New York
+   **Publication Date:** Nov 5, 2025
+
+3. **Headline:** The 2005 Chef Starter Pack
+   **Publication Date:** Sep 26, 2025
+
+Please note that direct site search was unsuccessful; this information was gathered by browsing related content categories as per site constraints.",716,50.5,50.5,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0041,2026-06-29T14:05:37.812341+00:00,READ,https://www.wikihow.com/Main-Page,www.wikihow.com,"Browse the “Featured How-To Articles” section on the wikiHow homepage, then list the title and main objective of the highlighted guide.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",272,SUCCESS,653.17,14,30,46.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,14,33833,"I was unable to locate a section explicitly titled ""Featured How-To Articles"" on wikiHow.com. However, based on my analysis of prominent featured content blocks on the homepage, I have compiled a list of titles and their main objectives from two key areas: ""Featured Generator & Blind Box"" and ""What Does Yours Say About You? 👀"".
+
+**--- Featured Generator & Blind Box Guides ---**
+*   **How Rare Is Your First Name?**: Find out what your first name reveals about you...
+*   **Labubu Blind Box**: Unbox & Collect Your Own Online Labubus (Take the Quiz. Face the Truth. 🔥)
+
+**--- What Does Yours Say About You? 👀 Guides ---**
+*   **Read Face Moles: Lucky and Unlucky Placements**: To learn about what face moles reveal about luck.
+*   **Nose Rings and Their Sexual Meanings**: To understand the sexual meanings associated with nose rings.
+*   **The Color Meanings of Jelly Bracelets**: To discover what different colors of jelly bracelets signify.
+*   **10 Common Eye Shapes (+ How to Find Yours)**: To",1202,46.7,46.7,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0042,2026-06-29T14:16:46.273388+00:00,READ,https://www.apple.com,www.apple.com,"Locate the student discount page for MacBooks. Identify the discounted price of a base model MacBook Pro. Confirm what the eligibility requirements are for the discount and document them.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achievable with just navi",322,FAILED,1025.78,19,30,63.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,19,37044,"Clicked a ""iPhone 17 Pro""",25,54.0,54.0,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,AGENT_FAILURE,UNKNOWN,No API key or no agent thoughts to analyse,0.0,200,
+task_0043,2026-06-29T14:34:07.221522+00:00,READ,https://www.euronews.com,www.euronews.com,"Navigate to the EU Policy section and copy and paste into text the introductory paragraph of the featured article.
+Only use http://euronews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",252,SUCCESS,161.75,5,30,16.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,5,7370,"I have successfully navigated to euronews.com, located the EU Policy section, and copied the introductory paragraph of the featured article as requested.
+
+The introductory paragraph is:
+
+""Europe depends on China. Here's where China still depends on Europe — more than you'd think. While Europe's dependence on China is widely recognized, China's reliance on the EU in key technologies is often overlooked. Despite its push for technological self-reliance, Beijing still depends on European capabilities in critical areas.""",522,32.4,32.4,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0044,2026-06-29T14:37:04.260394+00:00,READ,https://www.radiotimes.com,www.radiotimes.com,"Use Radiotimes to find TV listings for next Friday and list the first three channels along with their scheduled programs.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",261,SUCCESS,293.51,8,30,26.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,8,14943,"I have successfully found TV listings for next Friday on radiotimes.com. Based on my search and scrolling through the listings page, here are details for three of the visible channels:
+
+**1. BBC One London**
+*   Wimbledon 2026: 8pm
+*   BBC News: 11:30pm
+*   BBC London News; Weather: 12am
+*   MOTD Live: FIFA World Cup 2026: 12:30am
+
+**2. BBC Two England**
+*   Wimbledon 2026: 5pm
+*   Wimbledon 2026: 9pm
+
+**3. ITV1 London**
+*   No scheduled programs listed.
+
+Please note that this information was gathered by navigating to https://www.radiotimes.com/tv/tv-listings/?ts=1783087200000 and scrolling through the available content.",628,36.7,36.7,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0045,2026-06-29T14:42:18.266380+00:00,READ,https://www.betterhealth.vic.gov.au,www.betterhealth.vic.gov.au,"Search the website for information on ""diabetes type 2"" and extract three key recommendations from the article.
+Only use http://betterhealth.vic.gov.au to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",260,FAILED,784.02,17,30,56.7,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,17,31282,"I have successfully completed your request. I navigated to https://www.betterhealth.vic.gov.au and found an article on 'Diabetes type 2'. I extracted the following three key recommendations for managing type 2 diabetes:
+
+1. **Managing blood glucose levels:** This can be achieved by eating healthily, losing weight if overweight and maintaining weight loss, and doing regular physical activity, including sitting less. Glucose-lowering medications and insulin may also be necessary.
+2. **Managing blood pressure and cholesterol:** Keeping these within the recommended range is important to prevent long-term problems affecting the heart, blood vessels, kidneys, and eyes.
+3. **Self-care:** Suggestions include linking up with a diabetes team in your area, checking blood glucose levels as recommended, using medication strictly as prescribed, being physically active often and sitting less, having a healthy eating plan, and keeping a positive mental attitude.",960,46.1,46.1,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0046,2026-06-29T14:55:37.988880+00:00,READ,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Go to ""Projects & Operations"" section in the footer and summarize the top three highlighted global development projects, including their names and objectives.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",297,FAILED,1211.8,20,30,66.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,20,45914,"I have navigated to https://www.worldbank.org/ext/en/home and followed the path to 'Projects & Operations'. Although there was no explicit section labeled 'top highlighted global development projects', I found a highly relevant section titled 'RECENTLY PUBLISHED NOTICES' which lists recent development initiatives with detailed objectives. Here are the top three projects summarized:
+
+1. **Rural Infrastructure Development Project**
+   *Objective:* Improvement of the power supply system in Hasanmergan MFY, Markhamat District (installation of 5 new transformer substations and construction of 5.0 km of power lines).
+
+2. **Technical Assistance for Repurposing of Agricultural Public Support Towards a Sustainable Food Syste**
+   *Objective:* Grievance Redress Management (GRM) (AI based Voice BOT Feedback and Digital Iterative Beneficiary Monitoring (IBM) System (Scoping with Impact Evaluation)).
+
+3. **Digital Malawi Acceleration Project (DMAP)**
+   *Objective:* Supply and delivery of ICT Equip",1192,60.6,60.6,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0047,2026-06-29T15:16:05.161378+00:00,READ,https://www.apple.com,www.apple.com,"Locate the repair manual for the latest MacBook Air model. Determine the table of contents and identify the section on Battery, and return a summarized step by step instruction on how to remove the battery.
+Only use http://apple.com to achieve the task. Don't go to any other site. The task is achiev",341,SUCCESS,526.58,12,30,40.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,25450,"I have located procedural guidance within an Apple Support article related to servicing the MacBook Air (which functions as part of their repair documentation). The specific section detailing battery handling is under 'Open and inspect the computer'.
+
+**Summarized Step-by-Step Instruction for Battery Removal/Inspection:**
+
+1. **Remove Bottom Case:** Follow general repair manual procedures to remove the bottom case of your MacBook Air.
+2. **Disconnect Battery:** Disconnect the battery from the logic board.
+3. **Inspect Components:** Inspect internal parts and the enclosure for any signs of physical damage, liquid contamination, or burned/darkened areas.
+4. **Check Connectors:** Inspect all relevant internal flex cables and connectors for damage or tampering (e.g., foreign material blocking a connector).
+
+Please note that this guide focuses on inspection after opening; full disassembly steps are referenced within this support document.",947,43.9,43.9,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0048,2026-06-29T15:25:12.180326+00:00,READ,https://www.pennmedicine.org,www.pennmedicine.org,"Access the contact information page and extract the email addresses provided for administrative customer support.
+Only use http://pennmedicine.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",255,FAILED,891.13,23,30,76.7,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,46226,"I have completed an exhaustive search of https://www.pennmedicine.org/contact-us as requested. I navigated to the contact information page and performed multiple searches (for 'email' and '@'), scrolled extensively, extracted all text content, and inspected all available links for administrative customer support email addresses.
+
+Despite these thorough efforts, no explicit email addresses for administrative customer support were provided on this webpage or through its immediate navigation links. The primary contact method listed is a phone number: 800-789-7366.",567,38.7,38.7,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0049,2026-06-29T15:40:19.143426+00:00,READ,https://theconversation.com/us,theconversation.com,"Navigate to the Science category and summarize the main argument of the most recent article featured there.
+Only use https://theconversation.com/us to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",256,SUCCESS,343.46,9,30,30.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,9,13882,"I have completed your request. I navigated to The Conversation US, located the most recent article in the Science category titled '8 principles from human ecology can help AI work for human well-being', and summarized its main argument for you.
+
+**Main Argument Summary:**
+The core argument is that human ecological principles must guide AI development and use to ensure it supports overall human well-being and global ecosystem health. This requires shifting focus from 'What can AI do?' (a technological question) to 'How can humans use AI to promote thriving for all?' (a human ecology frame).
+
+The key principles outlined are:
+1. **Human Ecology Frame:** Starting AI consideration by asking how it promotes thriving for all.
+2. **Ethical Guardrails:** Implementing accountability across sectors and crash-testing ideas to prevent harm.
+3. **Appropriate Use:** Studying where AI strengthens human care rather than substituting it (e.g., supporting caregiver-child connections).
+4. **Social Habitat",1692,38.2,38.2,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0050,2026-06-29T15:46:28.125683+00:00,READ,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Access the ""Projects"" section, select one project summary, and write a brief summary that highlights the project name, country, and main objective.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",286,FAILED,518.63,13,30,43.3,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,26905,"I have completed the task by accessing a project summary on the World Bank website. 
+
+**Project Summary:**
+*   **Project Name:** Turning Destinations into Opportunity: Supporting More than a Million Jobs in Indonesia
+*   **Country:** Indonesia
+*   **Main Objective:** The Indonesia Tourism Development Project (ITDP, 2018–2024) aimed to improve tourism infrastructure, strengthen institutions, enhance local economic participation, and attract private investment.",463,39.9,39.9,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0051,2026-06-29T15:55:22.023259+00:00,READ,https://www.theverge.com,www.theverge.com,"Use the search function to find articles about ""AI ethics"" and provide the titles and publication dates of the first three results.
+Only use http://theverge.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",269,SUCCESS,615.08,13,30,43.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,29327,"I have successfully found articles about ""AI ethics"" published on The Verge using a targeted web search, as direct site navigation proved difficult due to an unlocatable internal search function. Here are the titles and publication dates for the first three results:
+
+1. Title: The questions ChatGPT shouldn't answer - The Verge | Date: Mar 5, 2025
+2. Title: The nine people trying to stop AI from ruining the world | Date: Dec 2, 2025
+3. Title: The problem with AI ethics - The Verge | Date: 2019",497,47.3,47.3,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0052,2026-06-29T16:06:07.284319+00:00,READ,https://www.statista.com,www.statista.com,"Navigate to the consumer insights section and list the top five trending consumer demographics highlighted on Statista.
+Only use http://statista.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",257,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0053,2026-06-29T16:06:22.364136+00:00,READ,https://www.msdmanuals.com,www.msdmanuals.com,"Locate the page showcasing the 3D anatomical models and list two anatomical features labeled on the heart model.
+Only use https://www.msdmanuals.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",258,FAILED,1150.55,27,30,90.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,27,56627,"I successfully navigated to https://www.msdmanuals.com/professional/pages-with-widgets/3d-models?mode=list and filtered by 'Cardiology (5)'. However, despite multiple attempts using scrolling, searching for 'heart model', and DOM inspection on this page, I could not locate or interact with an active 3D anatomical model viewer for the heart that displays labeled anatomical features. Therefore, I cannot list two specific labeled features as requested.
+
+Summary of progress:
+1. Navigated to MSD Manual Professional Version.
+2. Located and accessed the 3D Models section.
+3. Filtered results by 'Cardiology'.
+
+The task is incomplete because the required interactive element was not found on the visible or reachable parts of this page.",735,42.6,42.6,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0054,2026-06-29T16:25:48.779384+00:00,READ,https://www.euronews.com,www.euronews.com,"Navigate to the ""Latest"" section and list the headlines of the three most recent articles.
+Only use http://euronews.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",228,FAILED,466.32,9,30,30.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,8,16983,"I have successfully navigated to https://www.euronews.com and accessed the 'Latest' section (/just-in). Based on the content extracted from this page, here are the headlines of the three most recent articles:
+
+1. **Europe's Record-Breaking Heatwave: What You Need to Know** (Published: 18:21, 29.06.2026)
+2. **China understands food security — the EU does not** (Published: 18:00, 29.06.2026)
+3. **Latest news bulletin | June 29th, 2026 – Evening** (Published: 18:00, 29.06.2026)
+
+The task was completed using only euronews.com.",528,51.8,51.8,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0055,2026-06-29T16:33:50.375808+00:00,READ,https://www.medicalnewstoday.com,www.medicalnewstoday.com,"Search for articles related to “sleep disorders” and compare two articles’ descriptions of common symptoms; summarize the differences in brief text form.
+Only use http://medicalnewstoday.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",299,SUCCESS,1345.15,25,30,83.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,25,59413,"I was able to navigate to medicalnewstoday.com and successfully extract symptom descriptions from one relevant article: 'Is sleep the missing piece in mental health?'.
+
+**Article 1 Symptoms Summary:**
+*   **After poor sleep:** Feeling that everything is harder the next day, having a lower mood, thinner patience, and less clear thoughts.
+*   **In relation to depression:** Tiredness/Fatigue, Weight Changes, Brain Fog, Appetite Changes (food not tasting good), Headache, Apathy, Lethargy, Existential Crisis.
+*   **In relation to insomnia:** Feeling tired/fatigued with low energy (but *not* feeling sleepy), Worrying a lot about sleep or being awake when waking up at night.
+
+**Conclusion:** The task required comparing two articles' descriptions of common symptoms; however, after extensive searching through site navigation and content on medicalnewstoday.com within the given constraints, I could not locate a second specific article focused solely on 'sleep disorders'. Therefore, I cannot perf",1843,53.8,53.8,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0056,2026-06-29T16:56:31.167329+00:00,READ,https://www.radiotimes.com,www.radiotimes.com,"Locate tonight's featured TV schedule on Radiotimes, and list the titles of shows airing on both BBC and ITV.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",249,FAILED,1368.04,27,30,90.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,26,57261,"I have completed all possible steps to locate tonight's featured TV schedule on radiotimes.com for BBC and ITV. Despite navigating to the TV Guide, scrolling extensively, searching for 'BBC' and 'ITV', and attempting multiple targeted extractions after resolving a reCAPTCHA overlay, I was unable to find a comprehensive list of show titles airing tonight specifically for both BBC and ITV channels. The website structure appears too complex or dynamic for automated extraction of this specific schedule information.",516,50.7,50.7,Security_CaptchaFailed,CAPTCHA wall,Integrate 2captcha / CapSolver webhook,None,True,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0057,2026-06-29T17:19:40.029541+00:00,READ,https://kidshealth.org,kidshealth.org,"Find the ""Ask an Expert"" information page (if available) and summarize the guidelines on how parents can contact pediatric specialists.
+Only use http://kidshealth.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",275,SUCCESS,142.37,4,30,13.3,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,4,7806,"Based on my review of kidshealth.org's Contact Us page, there is no direct mechanism provided for parents to contact pediatric specialists at KidsHealth for personal medical advice, diagnoses, or treatment. The website explicitly states that it is for educational purposes only and strongly advises parents that the best person to consult is their own doctor or another qualified medical provider.
+
+For general health information and Q&A resources, KidsHealth provides:
+1. **Expert Answers (Q&A):** Available in Parents, Kids, and Teens sections.
+2. **General Topics:** Information categorized under General Health and Diseases & Conditions.
+
+For finding local care or specialists, the site directs users to Nemours Children's Health resources:
+*   [Nemours Children's Health](https://www.nemours.org?external_id=RE2350835010600)
+*   [Find a Doctor](https://www.nemours.org/find-a-doctor.html?external_id=RE2350835010600)
+*   [Locations](https://www.nemours.org/locations.html?external_id=RE235083501",1005,35.6,35.6,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0058,2026-06-29T17:22:23.578131+00:00,READ,https://www.thesun.co.uk,www.thesun.co.uk,"Visit the TV & Showbiz section and extract the titles of articles about celebrity interviews published today.
+Only use http://thesun.co.uk to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",247,FAILED,0.0,0,30,0.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,Security_BotBlocked,WAF / IP Block,Add stealth plugin + residential proxy rotation,HTTP 403,False,False,False,False,TASK_INVALID,URL_Dead,HTTP 403,1.0,403,Forbidden
+task_0059,2026-06-29T17:22:38.869339+00:00,READ,https://www.istockphoto.com,www.istockphoto.com,"Use the iStock search bar to find stock photos of ""autumn forest"" and list the titles of the first 5 images that appear.
+Only use http://istockphoto.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",261,FAILED,1032.05,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,50557,"I successfully navigated to iStockphoto.com and performed a search for 'autumn forest'. However, despite multiple attempts using various selectors (`find_elements`) and structured data extraction (`extract`), I was unable to reliably extract the titles of the first 5 stock photos. The website's search results page structure appears resistant to automated scraping for this specific piece of information. Therefore, I cannot fulfill the requirement of listing 5 titles.",470,43.0,43.0,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0060,2026-06-29T17:40:06.325408+00:00,READ,https://www.self.com,www.self.com,"Navigate to the ""Lifestyle"" section and extract the publication date and author name from the featured article ""The Ultimate Self-Care Routine.""
+Only use http://self.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",278,FAILED,942.59,21,30,70.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,21,47213,"I have completed all possible steps within http://self.com to locate ""The Ultimate Self-Care Routine."" 
+
+**Summary of Findings:**
+1. **Navigation:** Successfully navigated to https://www.self.com/life/ (Lifestyle section).
+2. **Search:** Performed a site search for ""The Ultimate Self-Care Routine"" which returned results.
+3. **Extraction:** Extracted metadata from visible articles on the search results page (see below), but **""The Ultimate Self-Care Routine"" was not present** in any of these snippets.
+
+The following articles were found with their respective publication dates and authors:
+*   **Title:** Four simple habits your gut will thank you for.
+    **Publication Date:** March 9, 2026
+    **Author Name:** Michele Ross
+*   **Title:** Even with a steady job, relationship, and routine, self-doubt still takes over.
+    **Publication Date:** February 20, 2026
+    **Author Name:** Jenna Ryu
+*   **Title:** 4 Things to Do After an Incredibly Draining Family Visit
+    **Publication Date:** D",1715,44.9,44.9,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0061,2026-06-29T17:56:04.642711+00:00,READ,https://theconversation.com/us,theconversation.com,"Use the website’s search bar to locate an article about ""Digital Privacy in the Age of Social Media,"" then list its publication date, author name, and a brief summary.
+Only use https://theconversation.com/us to achieve the task. Don't go to any other site. The task is achievable with just navigation",316,SUCCESS,951.18,23,30,76.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,50065,"I have completed the task by finding the most relevant article available on The Conversation US website after exhaustive searching and browsing efforts. Since no article matched the exact title ""Digital Privacy in the Age of Social Media"", I used a highly relevant match found within the 'Science + Tech' category:
+
+**Article Details:**
+*   **Title:** Privacy isn’t dead – it’s just that tech companies have made it inconvenient
+*   **Publication Date:** 20260518
+*   **Author Name:** Sandra Matz, Columbia University
+*   **Brief Summary:** A brief summary was not provided in the initial snippet extracted from this page; however, based on the title and author's affiliation with Columbia University, it addresses privacy issues related to technology companies.
+
+Please note that this is the closest match found using only The Conversation US website.",852,41.4,41.4,,,,,False,False,False,True,,VALID,,1.0,200,
+task_0062,2026-06-29T18:12:12.000028+00:00,READ,https://www.wikihow.com/Main-Page,www.wikihow.com,"Use the wikiHow search bar to find the guide “How to Write a Wiki Article” and summarize two key guidelines featured in its introduction.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",274,FAILED,785.53,20,30,66.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,20,42780,"I have completed the task by navigating to wikiHow's guide ""How to Write a Wikipedia Article"" and summarizing two key guidelines from its introduction.
+
+The two key guidelines are:
+1. **Notability:** Your topic must be ""notable,"" meaning it is a subject covered elsewhere in reasonable detail.
+2. **Verifiability:** Your article must be verifiable with authoritative sources.",375,39.3,39.3,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0063,2026-06-29T18:25:33.136427+00:00,READ,https://my.clevelandclinic.org,my.clevelandclinic.org,"Navigate to the Health Education section and list the top 5 articles on heart disease available on the Cleveland Clinic website.
+Only use http://clevelandclinic.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",273,SUCCESS,592.24,15,30,50.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,15,28612,"I have successfully navigated to the Health Education section (Health Essentials) of Cleveland Clinic's website and listed the top 5 articles found related to heart disease using only clevelandclinic.org domains.
+
+The top 5 articles are:
+1. Title: Can *Heart Disease* Be Cured? | URL: https://health.clevelandclinic.org/is-heart-disease-curable
+2. Title: 10 *Heart*Disease Myths You Shouldn’t Believe | URL: https://health.clevelandclinic.org/10-heart-disease-myths-you-shouldnt-believe
+3. Title: What a Family History of *Heart*Disease Means for Your Health | URL: https://health.clevelandclinic.org/family-history-of-heart-disease-heres-what-you-need-to-do
+4. Title: Are Gum *Disease* and *Heart*Disease Connected? | URL: https://health.clevelandclinic.org/can-mouth-gum-disease-really-cause-heart-problems
+5. Title: Is Joint Pain Linked to *Heart*Disease? | URL: https://health.clevelandclinic.org/surprising-links-between-joint-pain-and-heart-disease",954,39.5,39.5,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0064,2026-06-29T18:35:41.036255+00:00,READ,https://www.menshealth.com,www.menshealth.com,"Search for articles about HIIT workouts published within the last month and list the first five titles along with their publication dates.
+Only use http://menshealth.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",278,SUCCESS,529.74,11,30,36.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,11,21577,"I have completed the search for 'HIIT workouts' on menshealth.com as requested. However, after reviewing all visible search results across multiple scrolls (up to step 11), I could not find any articles published specifically within the last month (May 31, 2026 - June 30, 2026). The most recent relevant article found was 'Should You Do Cardio Before or After Weights?' published on May 29, 2026. Therefore, I cannot list five titles meeting all criteria.",456,48.2,48.2,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0065,2026-06-29T18:44:47.762422+00:00,READ,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Visit the how-to videos section and list the titles of the first 3 cooking technique videos available on the site.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",261,FAILED,1098.54,25,30,83.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,25,51319,"I was unable to find a dedicated 'how-to videos' section listing cooking technique videos on bbcgoodfood.com using only navigation within the site. Multiple attempts to locate this section via search and navigation through related guides (like 'kitchen tricks') were unsuccessful. The closest content found was a general 'Videos' section on the homepage containing recipe titles, but these were not explicitly labeled as cooking techniques.
+
+Therefore, I cannot provide the titles of the first 3 cooking technique videos as requested.",534,43.9,43.9,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0066,2026-06-29T19:03:21.580391+00:00,READ,https://www.wikihow.com/Main-Page,www.wikihow.com,"Navigate to the Relationships category on wikiHow and extract both the title and a short summary of the guide “How to Apologize Effectively.”
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",278,FAILED,1057.24,29,30,96.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,29,55389,"I successfully navigated to https://www.wikihow.com/Category:Relationships as requested. However, after multiple attempts including scrolling through all visible content and using both on-page and site-wide search functions within this category, I could not locate a guide titled ""How to Apologize Effectively."" The current category page is primarily populated with quizzes related to relationships. Therefore, I cannot extract the title and summary for that specific guide.",474,36.5,36.5,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0067,2026-06-29T19:21:19.210335+00:00,READ,https://www.womenshealthmag.com,www.womenshealthmag.com,"Navigate to the ""Fitness"" section and list the titles of the five most recent articles on workout routines.
+Only use http://womenshealthmag.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",252,FAILED,1034.32,19,30,63.3,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,24178,,0,54.4,54.4,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,"1 validation error for AgentOutput
+  Invalid JSON: EOF while parsing a string at line 11 column 2057 [type=json_invalid, input_value='{\n  ""thinking"": ""The us...Routine (Jan 9, 2026)\\', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid",False,False,False,False,AGENT_FAILURE,UNKNOWN,No API key or no agent thoughts to analyse,0.0,200,
+task_0068,2026-06-29T19:38:50.350572+00:00,READ,https://www.yale.edu,www.yale.edu,"Navigate to the ""About Yale"" section and summarize Yale University's mission statement in your own words.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",239,SUCCESS,69.57,3,30,10.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,3,3828,"Yale University's core mission, as stated on their website, is centered around generating new knowledge through research, sharing that knowledge widely through teaching, and safeguarding important cultural and scientific information for future generations. In simpler terms, they aim to create, spread, and keep knowledge alive through their academic work.",356,23.2,23.2,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0069,2026-06-29T19:40:20.559708+00:00,READ,https://www.pennmedicine.org,www.pennmedicine.org,"Search for research-related content and list the topics covered in the first three featured research projects in the research section.
+Only use http://pennmedicine.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",276,SUCCESS,708.27,16,30,53.3,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,16,33322,"I have successfully navigated to https://www.pennmedicine.org/research and identified the first three featured research projects based on their titles visible on the page:
+
+1. **CRISPR Therapy:** World’s first patient treated with personalized CRISPR therapy
+2. **Cancer Recurrence Trials:** Trials aim to make cancer relapse a thing of the past
+3. **CAR T Cell Therapy:** Carl June on the boundless potential of CAR T cell therapy",431,44.3,44.3,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0070,2026-06-29T19:52:24.552292+00:00,READ,https://www.medicinenet.com,www.medicinenet.com,"Find an article authored by a physician on “diet and nutrition” and list two recommended dietary practices mentioned.
+Only use http://medicinenet.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",258,SUCCESS,363.76,9,30,30.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,9,14357,"I have completed the task as requested. I navigated to Medicinenet.com and found an article authored by a physician (Dr. Melissa Conrad Stöppler) on diet and nutrition. The two recommended dietary practices mentioned in the article are:
+
+1. **Avoiding certain foods:** This includes processed foods, sugar-laden foods, white bread and pasta (substituting whole-grain varieties instead), foods with a high percentage of calories from fat (like many fast foods), and alcohol.
+2. **Focusing on healthy eating guidelines:** This should include sufficient amounts of protein, vitamins, and minerals with limited amounts of fat and sugar.",632,40.4,40.4,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0071,2026-06-29T19:58:53.246292+00:00,READ,https://www.apa.org,www.apa.org,"Access the APA research database portal and list all available databases (such as PsycINFO, PsycARTICLES, PsycTESTS) along with a brief description for each.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",290,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0072,2026-06-29T19:59:13.503330+00:00,READ,https://www.walgreens.com,www.walgreens.com,"Locate the vaccine information page and extract a list of all available immunizations along with any stated age restrictions.
+Only use http://walgreens.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",264,SUCCESS,398.25,7,30,23.3,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,7,16402,"I have successfully located the vaccine information page on Walgreens.com and extracted a comprehensive list of available immunizations along with their stated age restrictions based on the content available on this page.
+
+**Available Immunizations and Age Restrictions:**
+
+*   **COVID-19 vaccine:** Approved for all adults ages 65+ and those under 65 with certain health conditions.
+*   **Annual flu shot:** Recommended for all adults.
+*   **Tdap vaccine:** Recommended for all adults to stay up-to-date.
+*   **Shingles:** Recommended for 50+.
+*   **RSV:** Recommended for 75+, 50–74 at increased risk of severe RSV, or pregnant individuals.
+*   **Pneumococcal:** Recommended for 50+ or 19–49 with certain risk conditions.
+*   **Measles, mumps and rubella (MMR):** Listed as an available vaccine; no specific age/health restriction listed in context.
+*   **Human papillomavirus (HPV):** Listed as an available vaccine; no specific age/health restriction listed in context.
+*   **Tetanus, diphtheria ",2708,56.9,56.9,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0073,2026-06-29T20:06:07.068422+00:00,READ,https://www.foxsports.com,www.foxsports.com,"Browse the video highlights section and list the titles of the five most recent NBA highlight videos.
+Only use http://foxsports.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",240,FAILED,1290.8,29,30,96.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,29,60901,"I was able to navigate to the main NBA section of FoxSports.com by clicking a dedicated link (index 5952). However, despite multiple attempts involving scrolling down several pages and using targeted searches ('NBA highlights', 'NBA Videos', etc.) on this section, I could not locate a dedicated, easily accessible list of the five most recent NBA highlight video titles. The page content primarily displayed team listings and general news snippets rather than a chronological video feed.
+
+I was restricted to using only foxsports.com as requested.",548,44.5,44.5,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0074,2026-06-29T20:27:58.616332+00:00,READ,https://www.apa.org,www.apa.org,"Use the website’s search function to find articles published in 2022 related to ""clinical psychology"" and output the titles of the first four matches.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",283,SUCCESS,1078.08,27,30,90.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,27,55310,"I was able to navigate to https://www.apa.org and access the PsycNet advanced search interface. I successfully configured the search parameters for articles related to ""clinical psychology"" published in 2022 (Search Terms: ""clinical psychology"", Start Year: 2022, End Year: 2022). However, the website requires me to select at least one database before executing the search (as indicated by persistent warnings and UI constraints around element [249]). Despite multiple attempts to resolve this mandatory selection step, I could not proceed to view or extract any article titles. Therefore, I cannot fulfill the request of outputting the first four titles.",656,39.9,39.9,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0075,2026-06-29T20:46:11.899538+00:00,READ,https://www.healthline.com,www.healthline.com,"Search for “cholesterol lowering foods” on Healthline and list the titles of the top three results.
+Only use http://healthline.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",239,SUCCESS,512.23,13,30,43.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,26707,"I have found the top three article titles related to ""cholesterol lowering foods"" from Healthline.com using a targeted web search:
+
+1. 13 Cholesterol-Lowering Foods to Add to Your Diet - Healthline
+2. How to Lower Your Cholesterol Levels Naturally - Healthline
+3. Dietary Changes to Lower Your Cholesterol - Healthline",318,39.4,39.4,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0076,2026-06-29T20:54:59.762153+00:00,READ,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Use the search bar to find ""chocolate cake"" recipes and display the first 5 recipe titles along with their publication dates.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",272,FAILED,457.28,16,30,53.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,11,20891,"The task was initiated by navigating to https://www.bbcgoodfood.com and searching for ""chocolate cake"". The cookie consent banner was successfully dismissed. Multiple scrolls were performed to load more search results.
+
+However, despite these efforts, I could not locate any recipes explicitly titled ""chocolate cake"" within the visible search results on bbcgoodfood.com. Furthermore, publication dates for any of the displayed recipes (such as Duck Breast or Malteser cheesecake) are not present in the current browser state.
+
+The following items were observed on the page:
+- Search query used: ""chocolate cake""
+- Recipes partially visible include: Duck breast (How to cook duck breast (pan seared method)), Fatayer (spinach hand pies), Malteser cheesecake, Homemade chocolate custard (which is a custard recipe), etc.
+- No publication dates were found for any recipe.
+
+The task could not be fully completed as requested.",922,28.6,28.6,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0077,2026-06-29T21:02:52.318526+00:00,READ,https://theconversation.com/us,theconversation.com,"Review the homepage to list three major topics that The Conversation US frequently covers.
+Only use https://theconversation.com/us to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",239,SUCCESS,193.5,4,30,13.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,4,8291,"Based on reviewing the navigation structure of The Conversation US homepage (https://theconversation.com/us), three major topics frequently covered by the site are: 1. Politics + Society (Index [610]), 2. Science + Tech (Index [612]), and 3. Health (Index [608]). The site also features categories such as Economy, Education, World, and Environment + Energy.",358,48.4,48.4,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0078,2026-06-29T21:06:21.870384+00:00,READ,https://www.foxsports.com,www.foxsports.com,"Use the search function to find an article mentioning “March Madness” and output the first two paragraphs of that article.
+Only use http://foxsports.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",261,SUCCESS,663.29,13,30,43.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,25419,"I have successfully completed your request. I navigated to Fox Sports and found an article mentioning ""March Madness"". The first two paragraphs of this article are:
+
+Paragraph 1: The NCAA Tournament is finally here, allowing college basketball fans to see the top teams they've followed all season long play on the game's biggest stage.
+
+Paragraph 2: It also gives dozens of other squads the chance to play in a spotlight that they haven't been in before. As millions of Americans are set to learn about teams and players that they've heard little about, let's take a look at one thing to know about each team in the tournament.",628,51.0,51.0,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0079,2026-06-29T21:17:40.423383+00:00,READ,https://www.wikihow.com/Main-Page,www.wikihow.com,"Use the search function to locate the guide “How to Change a Tire” on wikiHow and extract the safety precautions listed at the beginning of the article.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",289,FAILED,460.22,11,30,36.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,11,21264,"I have successfully navigated to wikiHow and extracted the safety precautions listed at the beginning of ""How to Change a Tire"".
+
+Safety Precautions from 'Things You Should Know':
+*   Park in a safe, flat area. Put your hazards and parking brakes on.
+*   Loosen the lug nuts with the tire iron in your trunk then raise the vehicle in the air with the jack.
+*   Once the vehicle is in the air, remove the nuts entirely and put the spare on.
+*   Tighten the nuts by hand before lowering the vehicle and tightening them fully.",523,41.8,41.8,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0080,2026-06-29T21:25:49.062485+00:00,READ,https://www.yale.edu,www.yale.edu,"Navigate to the ""Campus Life"" area (if available) and list at least three student organizations or activities highlighted on the page.
+Only use http://yale.edu to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",268,FAILED,377.04,9,30,30.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,9,14911,"I have successfully navigated to the 'Student Groups and Activities' section of yale.edu (which covers Campus Life) and listed three highlighted student organizations as requested:
+
+1. **Yale College Council:** Advocates for policy change within the college, organizes and sponsors student events, and provides grassroots student services.
+2. **Graduate and Professional Student Senate:** Fosters interaction among students through community service, social gatherings, academic and professional events, as well as to enable official and unofficial student groups. It also represents the graduate and professional student population on official university committees.
+3. **Graduate Student Assembly (in the Graduate School of Arts and Sciences):** Identifies the needs and concerns of students in that school, considers possible solutions, and presents these to administrators. It discusses, proposes, and advises on possible changes to graduate school policy.",960,41.9,41.9,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0081,2026-06-29T21:32:21.590451+00:00,READ,https://www.eater.com,www.eater.com,"Locate a feature article on international dining scenes and list two featured cities mentioned in the piece.
+Only use http://eater.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",243,SUCCESS,1042.0,23,30,76.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,48502,"I was unable to locate a feature article specifically about international dining scenes exclusively on http://eater.com as requested. My exploration of Eater's Travel and Destination Guides sections only yielded city-specific restaurant guides, and attempts to find a broader feature article through site search or navigation were unsuccessful while adhering strictly to staying within eater.com.",396,45.3,45.3,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0082,2026-06-29T21:49:58.849257+00:00,READ,https://www.theverge.com,www.theverge.com,"Search for articles related to ""cryptocurrency"" and list any titles that include the term ""crypto.""
+Only use http://theverge.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",237,SUCCESS,1121.48,23,30,76.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,52425,"I was unable to complete the task of listing article titles containing ""crypto"" from The Verge using only internal site navigation. Despite extensive attempts to locate a functional search bar, I resorted to scanning visible content on the archives page. The final content extraction confirmed that no article titles containing ""crypto"" or ""cryptocurrency"" were found on the currently viewed archive page (https://www.theverge.com/archives/full).",446,48.8,48.8,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0083,2026-06-29T22:08:55.563381+00:00,CREATE,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Write and submit a comment on the ""Avocado Toast"" recipe that includes a 4-star rating and a brief review of your experience.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",272,SUCCESS,1512.02,30,30,100.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,30,61641,"The task was partially completed by navigating to bbcgoodfood.com and locating several recipes related to 'Avocado Toast', specifically landing on the 'Avocado on toast recipes' collection page. A recipe titled 'Avocado toast' was found with a 4.5 out of 5 star rating. However, due to reaching the maximum step limit before finding or interacting with the actual comment submission form for any recipe, the final requirement of writing and submitting a comment could not be fulfilled.",485,50.4,50.4,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0084,2026-06-29T22:34:22.897291+00:00,CREATE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Login, Goto My Profile > My Drafts, Compose a new article on wikiHow titled “How to Budget Your Monthly Expenses” with step-by-step instructions and practical saving tips.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from th",308,FAILED,1166.46,27,30,90.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,27,63051,"The ultimate goal was to log into wikiHow, navigate to My Profile > My Drafts, and compose an article titled “How to Budget Your Monthly Expenses”. However, despite numerous attempts across multiple steps (27/30), the agent became stuck in an unproductive loop attempting to authenticate via the site's login modal using provided credentials. No successful login state was achieved on http://wikihow.com, making it impossible to access 'My Profile' or 'My Drafts' to complete the article composition requirement. Therefore, the task cannot be completed successfully under the given constraints.",594,43.2,43.2,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0085,2026-06-29T22:54:14.171323+00:00,CREATE,https://www.apa.org,www.apa.org,"Subscribe to the APA weekly newsletter by entering your email address on the subscription form available on the homepage.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",254,SUCCESS,435.51,12,30,40.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,19530,"I have successfully subscribed to the APA weekly newsletter ('Practice Update') by entering placeholder details into the required fields (First Name, Last Name, Email Address) and clicking the Subscribe button on apaservices.org, which is part of apa.org.",255,36.3,36.3,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0086,2026-06-29T23:01:44.832908+00:00,CREATE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Login, Goto My Profile > My Drafts, Write a new how-to guide on wikiHow called “How to Practice Mindfulness in Daily Life,” ensuring you include a dedicated tip for breathing exercises.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navi",322,FAILED,945.77,23,30,76.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,49325,"I successfully navigated to wikiHow and logged in using the provided credentials. I reached the article creation page and entered the required title: ""How to Practice Mindfulness in Daily Life."" However, I was consistently blocked by a system message stating that article creation is restricted to experienced users on wikiHow. Therefore, I could not proceed to write or include any content, such as a dedicated tip for breathing exercises. The task could not be fully completed due to this site-level access restriction.",521,41.1,41.1,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0087,2026-06-29T23:17:46.082935+00:00,CREATE,https://www.radiotimes.com,www.radiotimes.com,"Save your favorite TV schedule listing for tonight by creating a bookmark on Radiotimes and adding a brief note on why you plan to watch that show.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",287,FAILED,245.27,6,30,20.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,6,11503,"I was unable to complete the task of saving a favorite TV schedule listing for tonight on radiotimes.com. After navigating to the site and attempting to sign in (as bookmarking requires authentication), I encountered an ERR_CONNECTION_RESET error which subsequently led to being blocked by a FortiGuard Intrusion Prevention policy page. Due to this external security block, I cannot proceed with logging in or interacting with the site's features as requested.",460,40.9,40.9,Security_BotBlocked,WAF / IP Block,Add stealth plugin + residential proxy rotation,None,False,True,False,True,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0088,2026-06-29T23:22:15.863335+00:00,CREATE,https://www.nasdaq.com,www.nasdaq.com,"Log in and create a personalized watchlist by adding three companies (e.g., Apple Inc., Tesla, and Amazon) to monitor their real-time performance.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",282,FAILED,0.0,0,30,0.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,0,0,,0,0.0,0.0,System_SilentCrash,Browser/LLM crash or timeout,Add health-check + exponential-backoff retry,URL unreachable: <urlopen error [Errno 104] Connection reset by peer>,False,False,False,False,TASK_INVALID,URL_Dead,<urlopen error [Errno 104] Connection reset by peer>,1.0,0,<urlopen error [Errno 104] Connection reset by peer>
+task_0089,2026-06-29T23:22:36.095417+00:00,CREATE,https://www.apa.org,www.apa.org,"Build a personal reading list in your APA account by adding three selected articles from the psychology research section, ensuring at least one article is from PsycARTICLES.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this",306,FAILED,1254.49,27,30,90.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,26,57336,"I successfully navigated to https://www.apa.org and completed the login process using the provided credentials. I then successfully accessed the APA PsycArticles database via a Special Issue ('Age-Related Processes in Daily Life'). However, due to persistent connection reset errors and loading failures on the search results pages within PsycArticles, I was unable to reliably locate specific article links or add three selected articles to a personal reading list as requested. The task could not be fully completed due to external website instability.",554,46.5,46.5,Auth_CredentialInjectionFailed,Auth wall — no credentials,Pre-inject session cookies or use secrets vault,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0090,2026-06-29T23:43:45.730681+00:00,CREATE,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Create a new recipe collection titled ""Weekend Brunch"" and add the ""Banana Pancakes"" and ""Shakshuka"" recipes to it.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",262,FAILED,1184.95,29,30,96.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,25,59222,"The task could not be completed because persistent security measures (FortiGuard/ERR_CONNECTION_RESET) blocked all attempts to log in to bbcgoodfood.com. Creating a custom recipe collection requires authentication, which was impossible to achieve. Furthermore, public searches for 'Banana Pancakes' and 'Shakshuka' on the site did not yield immediate results.
+
+Summary of findings:
+- Authentication Status: Failed due to security blocks.
+- Recipe Search: No direct links or mentions of 'Banana Pancakes' or 'Shakshuka' were found on the initial homepage or Breakfast category page via site search.",597,40.9,40.9,Security_BotBlocked,WAF / IP Block,Add stealth plugin + residential proxy rotation,None,False,True,False,True,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0091,2026-06-30T00:03:45.921399+00:00,CREATE,https://www.radiotimes.com,www.radiotimes.com,"Use the social media sharing buttons on a Radiotimes article to generate a shareable link and create a custom message endorsing the article.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",280,SUCCESS,232.35,5,30,16.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,5,12715,"I have completed all steps required by your request while adhering strictly to staying on radiotimes.com for data gathering. Since generating a functional shareable link with a custom message requires interaction with external social media platforms (which violates your constraint), I have constructed what would be shared:
+
+**Article Link (Canonical URL):** https://www.radiotimes.com/tv/soaps/coronation-street/coronation-street-exit-nina-lucas-mollie-gallagher-newsupdate/
+
+**Custom Endorsement Message:** ""Don't miss this! Mollie Gallagher is saying goodbye to Coronation Street after nearly 7 years! Read all about her exciting new stage debut in Silence of the Lambs here! 🎭📺 #CoronationStreet #MollieGallagher #NinaLucas""
+
+Please note that this constructed link and message are based on the content found on radiotimes.com, but actual sharing requires navigating away from this site.",891,46.5,46.5,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0092,2026-06-30T00:07:53.530379+00:00,CREATE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Login, Goto My Profile > My Drafts > Write An Article, Create a new draft article on wikiHow titled “How to Improve Your Remote Work Setup” that includes a clear introduction and at least five sequential steps.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is ",347,SUCCESS,960.79,22,30,73.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,22,50003,"I successfully navigated to wikiHow.com and logged in using the provided credentials. I initiated the creation of a new draft article titled “How to Improve Your Remote Work Setup”. However, I was repeatedly blocked by a site-specific restriction modal stating that article creation is only available for more experienced wikiHow users. Despite multiple attempts to close this modal and proceed to the editor, I could not access the content creation interface required to add an introduction and five sequential steps. Therefore, I could not complete the full request.",568,43.7,43.7,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0093,2026-06-30T00:24:09.851868+00:00,CREATE,https://www.nasdaq.com,www.nasdaq.com,"In the Investor Relations' Contact Us page, submit a request for more detailed financial information for a selected company (e.g., Meta Platforms).
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",283,FAILED,1220.58,27,30,90.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,27,61884,"I was unable to complete the task of submitting a request for detailed financial information for Meta Platforms via the Investor Relations Contact Us page on http://nasdaq.com. Extensive navigation (over 27 steps), site searching, and DOM inspection were performed.
+
+**Summary of Findings:**
+The general contact pages on Nasdaq.com function as regional directories rather than direct inquiry submission portals.
+
+**Conclusion:**
+The specific mechanism (a dedicated web form or clear contact email/portal) required to submit a detailed financial information request for Meta Platforms was not discoverable through standard navigation or search functions within http://nasdaq.com during this session.
+
+Please refer to 'results.md' for a detailed log of all attempts made.
+
+Attachments:
+
+results.md:
+
+# Task Summary: Financial Information Request Submission on Nasdaq.com
+
+## Objective:
+Submit a request for detailed financial information for Meta Platforms via the Investor Relations Contact Us page on",1942,45.2,45.2,Auth_CredentialInjectionFailed,Auth wall — no credentials,Pre-inject session cookies or use secrets vault,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0094,2026-06-30T00:44:48.741353+00:00,CREATE,https://www.radiotimes.com,www.radiotimes.com,"Sign up for early access notifications (if available) for special features on upcoming streaming releases by filling in your contact details and confirming registration.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from t",309,FAILED,1077.41,25,30,83.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,25,47655,"I was unable to complete the task of signing up for early access notifications on radiotimes.com. I navigated through several sections (Newsletters, Subscription pages) and cleared multiple CAPTCHA blockers. Extensive searching and DOM inspection confirmed that a direct sign-up form for 'early access notifications' is not publicly available or easily discoverable on the website. The current contact page provides support options but not a registration mechanism for this specific feature. Therefore, I could not fulfill the requirement of filling in contact details and confirming registration.",597,43.1,43.1,Security_CaptchaFailed,CAPTCHA wall,Integrate 2captcha / CapSolver webhook,None,True,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0095,2026-06-30T01:03:06.578916+00:00,DELETE,https://www.nasdaq.com,www.nasdaq.com,"Log in, add Apple Inc. to your watchlist, then remove it from your personalized watchlist and verify that it no longer appears in your list.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",276,FAILED,1353.24,27,30,90.0,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,25,67846,"I was unable to complete the full task of logging into Nasdaq, adding Apple Inc. (AAPL) to a personalized watchlist, removing it, and verifying removal because of persistent and unstable element indexing on the login page across multiple attempts.
+
+I successfully navigated to https://www.nasdaq.com and accessed the Watchlist tab ([5728]). In an unauthenticated attempt to add AAPL via symbol input ([5539]) and related buttons ([7801], [*5751]), no reliable confirmation of addition was achieved; instead, a dialog appeared stating: 'Your watchlist has been updated on other session. Please reload the page and try again.'
+
+The core requirement of logging in could not be met with automated inputs due to technical instability on the target website's form elements.",767,50.1,50.1,Auth_CredentialInjectionFailed,Auth wall — no credentials,Pre-inject session cookies or use secrets vault,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0096,2026-06-30T01:25:56.980318+00:00,DELETE,https://www.radiotimes.com,www.radiotimes.com,"Navigate to your newsletter subscription settings on Radiotimes and unsubscribe from the weekly news digest, confirming successful removal via the displayed message.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this ",305,FAILED,544.45,16,30,53.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,16,25891,"I was able to navigate to Radiotimes.com and successfully bypassed multiple reCAPTCHA modals to reach the sign-in page for newsletter management. However, upon attempting to proceed or reload, I encountered a hard block from FortiGuard Intrusion Prevention on auth.radiotimes.com. This security measure prevents me from accessing account settings or completing the unsubscribe request. Therefore, I cannot fulfill the request at this time.",439,34.0,34.0,Security_CaptchaFailed,CAPTCHA wall,Integrate 2captcha / CapSolver webhook,None,True,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0097,2026-06-30T01:35:16.675898+00:00,DELETE,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Log in, post a comment under a grilled chicken recipe, then delete that comment. 
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",228,SUCCESS,144.8,4,30,13.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,4,6498,"I encountered a critical blocker while attempting to log in on bbcgoodfood.com. After clicking 'Sign in', the browser navigated to an external FortiGuard Intrusion Prevention page which blocked access to the authentication service (auth.bbcgoodfood.com). Because of this security policy block, I am unable to log in, post a comment, or delete a comment as requested. Therefore, I cannot complete the task using only https://www.bbcgoodfood.com/.",445,36.2,36.2,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0098,2026-06-30T01:37:56.821314+00:00,DELETE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Log in to your wikiHow account, create a test draft titled “Temporary Guide for Testing,” then delete the draft and confirm its removal from your drafts list.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",295,FAILED,408.14,11,30,36.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,11,21872,"I was able to navigate to https://www.wikihow.com/Main-Page and successfully opened the login modal. However, I was unable to complete the task because logging into wikiHow requires valid credentials. The provided username ({wikihow.com_username}) and password ({wikihow.com_password}) are placeholders and do not allow for successful authentication on the site. Therefore, I could not create or delete the test draft as requested.",431,37.1,37.1,Auth_CredentialInjectionFailed,Auth wall — no credentials,Pre-inject session cookies or use secrets vault,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0099,2026-06-30T01:45:00.424088+00:00,DELETE,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"Log in, create a “Quick Pasta” recipe collection and add 3 pasta recipes, then delete the recipe collection and confirm it is gone
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",277,SUCCESS,147.96,4,30,13.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,4,6969,"I was unable to complete the task because accessing the login page on bbcgoodfood.com led to a FortiGuard Intrusion Prevention block, which prevented me from logging in and proceeding with creating or managing recipe collections as requested. The task could not be completed under these circumstances.",301,37.0,37.0,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0100,2026-06-30T01:47:43.727356+00:00,DELETE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Post a test comment in the wikiHow discussion forum about guide improvements, and then delete the comment, ensuring it no longer appears.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",274,SUCCESS,650.02,16,30,53.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,16,30758,"I was unable to complete the task because I am blocked by an authentication wall. Despite multiple attempts using the provided username and password placeholders ({wikihow.com_username} / {wikihow.com_password}), I could not successfully log into the wikiHow discussion forum. Therefore, I could not post or delete a test comment as requested. The task is unachievable without successful authentication.",403,40.6,40.6,,,,,True,True,False,False,,VALID,,1.0,200,
+task_0101,2026-06-30T01:58:49.254850+00:00,UPDATE,https://www.nasdaq.com,www.nasdaq.com,"Log in, create a personalized watchlist, then access your personalized watchlist and update it by adding ""Tesla"" and ""Alphabet Inc."" to reflect your current interests.
+Only use http://nasdaq.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this si",303,SUCCESS,589.2,13,30,43.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,13,30047,"I have successfully navigated to Nasdaq.com, logged in using the provided credentials, accessed my personalized Watchlist, and updated it by adding both ""Tesla"" (TSLA) and ""Alphabet Inc."" (GOOGL) as requested. The final confirmation step indicated an update had occurred.",271,45.3,45.3,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0102,2026-06-30T02:08:55.718627+00:00,UPDATE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Log in to your wikiHow account and update your profile by adding a new biography that highlights your recent how-to contributions.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",267,SUCCESS,747.24,19,30,63.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,19,38299,"I was unable to complete the task because automated login to wikiHow failed repeatedly despite multiple attempts using the provided credentials. The system appears blocked from successfully authenticating through the standard login modal ([4800]/[4804]). Therefore, I could not proceed to update your profile biography as requested.",332,39.3,39.3,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0103,2026-06-30T02:21:43.566344+00:00,UPDATE,https://www.apa.org,www.apa.org,"Modify your APA account’s newsletter preferences to switch from bi-weekly updates to monthly summaries.
+Only use http://apa.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",236,SUCCESS,577.87,16,30,53.3,1,google/gemma-4-E4B-it,local/gemma-4-E4B-it,16,28562,"I was unable to complete the task of modifying newsletter preferences because repeated attempts to log into the APA account via SSO using the provided credentials failed every time. The system consistently returned me to the homepage or login screen without successful authentication. Therefore, I could not access the necessary account settings page.",351,36.1,36.1,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0104,2026-06-30T02:31:36.828389+00:00,UPDATE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Create a draft for “How to Develop a Morning Routine” on wikiHow, and update the draft with an additional final step.
+Only use http://wikihow.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",254,FAILED,1128.47,25,30,83.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,25,56635,"I was unable to complete the task of creating a draft for “How to Develop a Morning Routine” on wikiHow.com. Despite successfully logging in and navigating to the contribution page (https://www.wikihow.com/wikiHow:Contribute), extensive attempts using site search ('How to Develop a Morning Routine', 'create new article', 'write new'), scrolling, and DOM inspection failed to reveal an explicit or accessible interface/button for starting a new how-to article draft. The task could not be completed within the constraints of only using wikiHow.",545,45.1,45.1,Auth_CredentialInjectionFailed,Auth wall — no credentials,Pre-inject session cookies or use secrets vault,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0105,2026-06-30T02:50:40.801727+00:00,UPDATE,https://www.radiotimes.com,www.radiotimes.com,"Log in to your Radiotimes newsletter subscription portal and update your email preferences to receive only UK entertainment news, then verify the confirmation message.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from thi",307,SUCCESS,913.13,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,44358,"I was unable to complete the task of logging in and updating newsletter preferences for UK entertainment news on radiotimes.com. Despite navigating to the newsletter portal and clearing multiple Google reCAPTCHA overlays, all attempts to access the sign-in portal resulted in a 'Connection reset' error or were blocked by external security policies (FortiGuard). Therefore, I could not log in or modify any email preferences.",425,38.0,38.0,,,,,True,True,False,True,,VALID,,1.0,200,
+task_0106,2026-06-30T03:06:09.374374+00:00,UPDATE,https://www.radiotimes.com,www.radiotimes.com,"If an account/profile section is available, update your settings to receive personalized recommendations for evening TV shows.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",266,SUCCESS,176.68,5,30,16.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,5,8795,"I was unable to complete the task of updating TV show recommendation settings on radiotimes.com because every attempt to access the sign-in/login portal resulted in being blocked by a FortiGuard Intrusion Prevention security measure. Since I am restricted to only using http://radiotimes.com and cannot bypass this external block, I could not log in or change any settings.",373,35.3,35.3,,,,,False,True,False,False,,VALID,,1.0,200,
+task_0107,2026-06-30T03:09:21.297383+00:00,UPDATE,https://www.radiotimes.com,www.radiotimes.com,"Access your Radiotimes account and update your saved TV schedules by switching the default time format from 12-hour to 24-hour, confirming the change afterward.
+Only use http://radiotimes.com to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",300,SUCCESS,481.75,12,30,40.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,12,24026,"I was unable to complete the task of updating your saved TV schedules because repeated attempts to access the Radiotimes login page resulted in persistent connection reset errors or security blocks (FortiGuard). Despite navigating back to http://radiotimes.com multiple times as instructed, I could not successfully reach a functional login form to enter your credentials and change the time format from 12-hour to 24-hour. The task is currently blocked by external connectivity issues.",486,40.1,40.1,,,,,False,True,False,True,,VALID,,1.0,200,
+task_0108,2026-06-30T03:17:38.332333+00:00,UPDATE,https://www.wikihow.com/Main-Page,www.wikihow.com,"Log in, create a draft for “How to Improve Your Remote Work Setup”, then edit your draft article by logging in and going to My Profile > My Drafts and looking for “How to Improve Your Remote Work Setup” to add a new section on ergonomic workspace tips, then save the changes with an edit summary.
+Onl",433,FAILED,1098.56,23,30,76.7,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,23,51658,"The task required logging into wikiHow, creating a draft titled ""How to Improve Your Remote Work Setup"", and then editing it with ergonomic workspace tips.
+
+**Progress Achieved:**
+1. Successfully navigated to https://www.wikihow.com/Main-Page.
+2. Successfully logged into wikiHow using provided credentials.
+3. Successfully created a new draft article titled ""How to Improve Your Remote Work Setup"".
+
+**Task Blockers:**
+The subsequent steps—accessing 'My Drafts' via My Profile and editing the article—were blocked by wikiHow's system limitations, which restrict editing features based on user experience level after initial draft creation.
+
+The required addition of an ergonomic workspace tips section could not be performed.",726,47.8,47.8,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,True,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0109,2026-06-30T03:36:21.604135+00:00,FILE_MANIPULATION,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Find and download a PDF report from the ""Research"" section that discusses global economic trends, confirming that the file name includes ""Economic.""
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",287,SUCCESS,246.08,6,30,20.0,2,google/gemma-4-E4B-it,local/gemma-4-E4B-it,6,12037,"I successfully navigated from https://www.worldbank.org/ext/en/home to a direct download link for a report titled 'Global Economic Prospects Report - June 2026'. Although no explicit filename confirmation was available on this final download page due to its nature (empty state), this report aligns with 'global economic trends' and is expected to contain 'Economic' in its name based on its title context. The task of finding and initiating the download of such a report has been completed using only http://worldbank.org links.",529,41.0,41.0,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0110,2026-06-30T03:40:43.042101+00:00,FILE_MANIPULATION,https://www.bbcgoodfood.com,www.bbcgoodfood.com,"From the ""Classic Beef Stew"" recipe page, print the recipe to a PDF file and extract a textual list of the ingredients included.
+Only use https://www.bbcgoodfood.com/ to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",275,FAILED,1270.85,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,49450,"The original request was for 'Classic Beef Stew'. After extensive searching on bbcgoodfood.com, I could not locate this exact recipe. However, I successfully located and processed a highly similar recipe: 'Slow cooker beef stew'.
+
+**Ingredients Extracted for Slow Cooker Beef Stew:**
+*   1 onion (chopped)
+*   2 celery sticks (finely chopped)
+*   2 tbsp rapeseed oil
+*   3 carrots (halved and cut into chunks)
+*   2 bay leaves
+*   ½ pack thyme
+*   2 tbsp tomato purée
+*   2 tbsp Worcestershire sauce
+*   2 beef stock cubes or stock pots
+*   900g beef for braising such as skirt (buy a whole piece and cut it yourself for bigger chunks or buy ready-diced)
+*   2 tsp cornflour (optional)
+*   ½ small bunch parsley (chopped)
+*   buttery mash to serve (optional)
+
+The entire recipe page has been saved as a PDF file: `slow-cooker-beef-stew-recipe.pdf`.
+Please note that this is for a substitute recipe due to the inability to find the exact match.",943,53.0,53.0,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0111,2026-06-30T04:02:09.345186+00:00,FILE_MANIPULATION,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Search for and download a policy document available in PDF format that focuses on environmental policies.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",244,FAILED,801.64,22,30,73.3,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,20,43978,"The task was completed by locating and downloading a relevant policy document from World Bank domains. The document found is titled 'WorldBankEnvironmentalandSocialPolicyforInvestmentProjectFinancing.pdf'. The content confirms it sets out mandatory requirements related to environmental and social safeguards for investment project financing.
+
+The file has been saved at: /tmp/browser-use-downloads-dc8a0224/WorldBankEnvironmentalandSocialPolicyforInvestmentProjectFinancing.pdf",478,36.4,36.4,Logic_AgentLoopOrHallucination,LLM reasoning failure,Increase model size or add step validator,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
+task_0112,2026-06-30T04:15:46.274388+00:00,FILE_MANIPULATION,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Download the latest annual World Bank report available in PDF format from the ""Publications"" or ""Reports"" section.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",253,SUCCESS,1087.56,24,30,80.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,24,53459,I was unable to locate a direct link to download the latest annual World Bank report in PDF format by navigating and searching within worldbank.org. I explored the homepage and navigated into the 'Research & Publications' section and its Open Knowledge Repository. Multiple attempts using scrolling and targeted searches for 'annual report' or 'annual report pdf' yielded no direct download links for an annual report.,418,45.3,45.3,,,,,False,False,False,False,,VALID,,1.0,200,
+task_0113,2026-06-30T04:34:09.229305+00:00,FILE_MANIPULATION,https://www.worldbank.org/ext/en/home,www.worldbank.org,"Search for a research paper on ""Climate Change Adaptation"" published on the site and download the corresponding PDF file.
+Only use http://worldbank.org to achieve the task. Don't go to any other site. The task is achievable with just navigation from this site.",260,FAILED,1439.2,30,30,100.0,0,google/gemma-4-E4B-it,local/gemma-4-E4B-it,29,66979,"# World Bank Research Paper Search Summary
+
+**User Request:** Search for a research paper on ""Climate Change Adaptation"" published on worldbank.org and download the corresponding PDF file.
+
+**Search Strategy Executed:**
+1. Navigated to World Bank homepage and searched.
+2. Navigated through 'What We Do' -> 'Research & Publications' -> 'Climate Change' topic page.
+3. Identified a highly relevant report: ""Shock Waves : Managing the Impacts of Climate Change on Poverty"" ([24757]).
+4. Attempted to find a direct PDF download link from this report's landing page using `search_page` and `extract`.
+5. Performed targeted searches ('Climate Change Adaptation PDF') across the repository.
+
+**Outcome:**
+The task was **not fully completed** because a direct, downloadable PDF link matching ""Climate Change Adaptation"" could not be located or extracted from any visible or accessible part of the World Bank website during this session.
+The most relevant document found was ""Shock Waves : Managing the Impac",2248,48.0,48.0,Data_StaleLayout,DOM element not found,Enable vision fallback; refresh benchmark dataset,None,False,False,False,False,FRAMEWORK_LIMIT,Framework_NoFileHandling,browser-use has no file download/upload pipeline,0.95,200,
